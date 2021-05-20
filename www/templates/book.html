@@ -1,3 +1,14 @@
+<style>
+  #book-select5{
+    float: left;
+    width: 50%;
+  } 
+  #book-select6{
+    float: right;
+    width: 50%;
+  } 
+
+</style>
 <ion-view title="Book" id="page2">
   <ion-content padding="true" class="has-header">
     <div>
@@ -15,15 +26,17 @@
       <ion-checkbox id="book-checkbox1">Round Trip</ion-checkbox>
       <div id="book-container1">
         <form id="book-form16" class="list">
-          <label class="item item-select" id="book-select5">
-            <span class="input-label">Startpoint</span>
-            <select></select>
-          </label>
-          <label class="item item-select" id="book-select6">
-            <span class="input-label">Endpoint</span>
-            <select></select>
-          </label>
-          <label class="item item-select" id="book-select2" name="book-passengers">
+          <div>
+            <label class="item item-select" id="book-select5">
+              <span class="input-label">Startpoint</span>
+              <select></select>
+            </label>
+            <label class="item item-select" id="book-select6">
+              <span class="input-label">Endpoint</span>
+              <select></select>
+            </label>  
+          </div>
+            <label class="item item-select" id="book-select2" name="book-passengers">
             <span class="input-label">Passengers</span>
             <select>
               <option>1</option>
