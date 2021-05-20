@@ -1,18 +1,36 @@
+<style>
+  #img-perfil{
+    display: block; 
+    width: 40%; 
+    height: auto; 
+    margin-left: auto; 
+    margin-right: auto;
+    border-radius: 50%;
+  }
+
+  #span-item{
+    color: gray; 
+    display: inline-block; 
+    float: right; 
+    font-size: 14px;
+  }
+</style>
+
 <ion-view title="Profile" id="page5">
   <ion-content padding="true" class="has-header">
     <div>
-      <img src="img/p2nS4rOMSERnL6HLV0j7_perfil.jpg" style="display: block; width: 40%; height: auto; margin-left: auto; margin-right: auto;">
+      <img id = "img-perfil" src="img/perfil2.jpg">
     </div>
     <h4 id="profile-heading7" style="color:#000000;">Dados Pessoais</h4>
     <form id="profile-form9" class="list">
-      <ion-item id="profile-list-item29">Primeiro Nome</ion-item>
-      <ion-item id="profile-list-item30">Último Nome</ion-item>
-      <ion-item id="profile-list-item31">Aeroporto Predefinido</ion-item>
+      <ion-item id="profile-list-item29">Primeiro Nome<span id="span-item">Pedro</span></ion-item>
+      <ion-item id="profile-list-item30">Último Nome<span id="span-item">Monteiro</span></ion-item>
+      <ion-item id="profile-list-item31">Aeroporto Predefinido<span id="span-item">Lisboa</span></ion-item>
     </form>
     <h4 id="profile-heading8" style="color:#000000;">Conta</h4>
     <form id="profile-form8" class="list">
       <ion-toggle toggle-class="toggle-positive" id="profile-toggle2">Notificações</ion-toggle>
-      <ion-item id="profile-list-item25">Email</ion-item>
+      <ion-item id="profile-list-item25">Email<span id="span-item">pmapm@ua.pt</span></ion-item>
       <ion-item class="item-icon-right" id="profile-list-item27" ui-sref="tabsController.alterarPalavraPasse()">Alterar Palavra-Passe
         <i class="icon ion-chevron-right"></i>
       </ion-item>
@@ -21,10 +39,10 @@
     <a ui-sref="tabsController.criarConta()" id="profile-button7" style="color:#FF0019;" class="button button-stable button-block">Eliminar Conta</a>
     <h4 id="profile-heading10" style="color:#000000;">Método de Pagamento</h4>
     <form id="profile-form11" class="list">
-      <ion-item id="profile-list-item33">Titular do Cartão</ion-item>
-      <ion-item id="profile-list-item34">Número do Cartão</ion-item>
-      <ion-item id="profile-list-item35">Validade mm/aa</ion-item>
-      <ion-item id="profile-list-item36">Código Segurança</ion-item>
+      <ion-item id="profile-list-item33">Titular do Cartão<span id="span-item">Pedro Monteiro</span></ion-item>
+      <ion-item id="profile-list-item34">Número do Cartão<span id="span-item">**** **** **** 5678</span></ion-item>
+      <ion-item id="profile-list-item35">Validade mm/aa<span id="span-item">09/21</span></ion-item>
+      <ion-item id="profile-list-item36">Código Segurança<span id="span-item">***</span></ion-item>
     </form>
   </ion-content>
 </ion-view>

@@ -1,3 +1,22 @@
+<style>
+#icon{
+  font-size: 30px; 
+  color: red; 
+  position: relative; 
+  top: 10px;
+}
+
+#thumbnail{
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#thumbnail:hover{
+  opacity: 0.7;
+}
+
+</style>
 <ion-view title="Favorites" id="page7">
   <ion-content padding="true" class="has-header">
     <div id="favorites-button-bar2" class="button-bar">
@@ -6,20 +25,23 @@
     </div>
     <ion-list id="favorites-list4">
       <ion-item class="item-thumbnail-right" id="favorites-list-item10" ui-sref="tabsController.book()">
-        <img src="img/TAP_Portugal_Logo.svg.png">
+          <img id="thumbnail" src="img/HutWGo5IRCupJxmDu4dv_madeira.jpeg">
         <h3>From: Paris, France</h3>
-        <h3>To: Paris, France</h3>   
-        <ion-icon name="heart"></ion-icon> 
-        <ion-icon name="star"></ion-icon>   
+        <h3>To: Paris, France</h3>
+        <i id="icon" class="icon ion-heart"></i>
       </ion-item>
       <ion-item class="item-thumbnail-right" id="favorites-list-item11" ui-sref="tabsController.book()">
-        <img src="img/Transavia_logo.svg.png">
-        <h2>Madrid, Spain</h2>
+        <img id="thumbnail" src="img/HutWGo5IRCupJxmDu4dv_madeira.jpeg">
+        <h3>From: Madrid, Spain</h3>
+        <h3>To: Madrid, Spain</h3>
+        <i id="icon" class="icon ion-heart"></i>
       </ion-item>
       <ion-item class="item-thumbnail-right" id="favorites-list-item12" ui-sref="tabsController.book()">
-        <img src="img/sata.png">
-        <h2>Warsaw, Poland</h2>
+        <img id="thumbnail" src="img/HutWGo5IRCupJxmDu4dv_madeira.jpeg">
+        <h3>From: Warsaw, Poland</h3>
+        <h3>To: Warsaw, Poland</h3>
+        <i id="icon" class="icon ion-heart"></i>
       </ion-item>
     </ion-list>
-  </ion-content>
+  </ion-content>  
 </ion-view>
