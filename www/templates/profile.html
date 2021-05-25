@@ -8,29 +8,44 @@
     border-radius: 50%;
   }
 
-  #span-item{
+  .span-item{
     color: gray; 
     display: inline-block; 
     float: right; 
     font-size: 14px;
   }
+  .input-right {
+    float: right;
+    height:1px;
+  }
 </style>
 
-<ion-view title="Profile" id="page5">
+<ion-view id="page5">
   <ion-content padding="true" class="has-header">
     <div>
       <img id = "img-perfil" src="img/perfil2.jpg">
     </div>
-    <h4 id="profile-heading7" style="color:#000000;">Dados Pessoais</h4>
+    <h4 id="profile-heading7" style="color:#000000;">My Information</h4>
     <form id="profile-form9" class="list">
-      <ion-item id="profile-list-item29">Primeiro Nome<span id="span-item">Pedro</span></ion-item>
-      <ion-item id="profile-list-item30">Último Nome<span id="span-item">Monteiro</span></ion-item>
-      <ion-item id="profile-list-item31">Aeroporto Predefinido<span id="span-item">Lisboa</span></ion-item>
+      <ion-item id="profile-list-item29">
+        <span>First Name</span>
+        <span class="span-item" id="fname"></span>
+      </ion-item>
+      <ion-item id="profile-list-item30">
+        <span>Last Name</span>
+        <span class="span-item" id="lname"></span>
+      </ion-item>
+      <ion-item id="profile-list-item31">
+        <span>Default Airport</span>
+        <span class="input-right">
+          <input type="text" name="name" id="airport" placeholder="" size="4"/>
+        </span>
+      </ion-item>
     </form>
-    <h4 id="profile-heading8" style="color:#000000;">Conta</h4>
+    <h4 id="profile-heading8" style="color:#000000;">My Account</h4>
     <form id="profile-form8" class="list">
       <ion-toggle toggle-class="toggle-positive" id="profile-toggle2">Notificações</ion-toggle>
-      <ion-item id="profile-list-item25">Email<span id="span-item">pmapm@ua.pt</span></ion-item>
+      <ion-item id="email">Email<span class="span-item">admin@ua.pt</span></ion-item>
       <ion-item class="item-icon-right" id="profile-list-item27" ui-sref="tabsController.alterarPalavraPasse()">Alterar Palavra-Passe
         <i class="icon ion-chevron-right"></i>
       </ion-item>
@@ -39,10 +54,10 @@
     <a ui-sref="tabsController.criarConta()" id="profile-button7" style="color:#FF0019;" class="button button-stable button-block">Eliminar Conta</a>
     <h4 id="profile-heading10" style="color:#000000;">Método de Pagamento</h4>
     <form id="profile-form11" class="list">
-      <ion-item id="profile-list-item33">Titular do Cartão<span id="span-item">Pedro Monteiro</span></ion-item>
-      <ion-item id="profile-list-item34">Número do Cartão<span id="span-item">**** **** **** 5678</span></ion-item>
-      <ion-item id="profile-list-item35">Validade mm/aa<span id="span-item">09/21</span></ion-item>
-      <ion-item id="profile-list-item36">Código Segurança<span id="span-item">***</span></ion-item>
+      <ion-item id="profile-list-item33">Titular do Cartão<span class="span-item">Pedro Monteiro</span></ion-item>
+      <ion-item id="profile-list-item34">Número do Cartão<span class="span-item">**** **** **** 5678</span></ion-item>
+      <ion-item id="profile-list-item35">Validade mm/aa<span class="span-item">09/21</span></ion-item>
+      <ion-item id="profile-list-item36">Código Segurança<span class="span-item">***</span></ion-item>
     </form>
   </ion-content>
 </ion-view>

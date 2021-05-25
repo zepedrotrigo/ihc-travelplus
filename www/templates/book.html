@@ -12,7 +12,7 @@
     width: 100%;
   }
 </style>
-<ion-view title="Book" id="page2">
+<ion-view id="page2">
   <ion-content padding="true" class="has-header">
     <div>
       <img src="img/yj9JyJxcQlarMVPg5udZ_logo.png" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
@@ -68,5 +68,6 @@
     $(document).ready(function(){
         $("#startdate").datepicker();
         $("#enddate").datepicker();
+        localStorage['loggedIn'] = "false";
     });
 </script>
