@@ -7,8 +7,9 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives','app.services',])
 
-.config(function($ionicConfigProvider, $sceDelegateProvider){
-
+.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider, $sceDelegateProvider){
+  $ionicConfigProvider.tabs.position('bottom');
+  $stateProvider
   $sceDelegateProvider.resourceUrlWhitelist([ 'self','*://www.youtube.com/**', '*://player.vimeo.com/video/**']);
 
 })
