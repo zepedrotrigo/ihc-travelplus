@@ -6,16 +6,16 @@
     <h3 id="criarConta-heading11" style="color:#000000;"></h3>
     <form id="criarConta-form14" class="list">
       <label class="item item-input" id="criarConta-input13">
-        <input type="text" placeholder="Nome">
+        <input type="text" placeholder="Nome" id="fname">
       </label>
       <label class="item item-input" id="criarConta-input14">
-        <input type="text" placeholder="Apelido">
+        <input type="text" placeholder="Apelido" id="lname">
       </label>
       <label class="item item-input" id="criarConta-input19">
-        <input type="number" placeholder="Telemóvel">
+        <input type="number" placeholder="Telemóvel" id="phone">
       </label>
       <label class="item item-input" id="criarConta-input15">
-        <input type="email" placeholder="Email">
+        <input type="email" placeholder="Email" id="email">
       </label>
       <label class="item item-input" id="criarConta-input18">
         <input type="text" placeholder="Aeroporto Predefinido">
@@ -23,13 +23,24 @@
     </form>
     <form id="criarConta-form15" class="list">
       <label class="item item-input" id="criarConta-input16">
-        <input type="password" placeholder="Palavra-Passe">
+        <input type="password" placeholder="Palavra-Passe" id="password">
       </label>
       <label class="item item-input" id="criarConta-input17">
         <input type="password" placeholder="Confirmar Palavra-Passe">
       </label>
-      <button id="criarConta-button13" class="button button-positive button-block">Criar Conta</button>
+      <button ui-sref="tabsController.login()" id="criarConta-button13" class="button button-positive button-block" onclick="register()">Criar Conta</button>
       <button ui-sref="tabsController.login()" id="criarConta-button10" class="button button-stable button-block">Cancelar</button>
     </form>
   </ion-content>
 </ion-view>
+
+<script>
+  function register() {
+    localStorage['fname'] = document.getElementById("fname").value;
+    localStorage['lname'] = document.getElementById("lname").value;
+    localStorage['phone'] = document.getElementById("phone").value;
+    localStorage['email'] = document.getElementById("email").value;
+    localStorage['password'] = document.getElementById("password").value;
+    alert("Registered successfully!");
+  }
+</script>

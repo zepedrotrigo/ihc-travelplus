@@ -3,17 +3,31 @@
     <h2 id="login-heading9" style="color:#000000;text-align:center;">Login</h2>
     <form id="login-form10" class="list">
       <label class="item item-input" id="login-input12">
-        <input type="text" placeholder="Email">
+        <input type="text" placeholder="Email" id="email">
       </label>
       <label class="item item-input" id="login-input20">
-        <input type="password" placeholder="Palavra-Passe">
+        <input type="password" placeholder="Palavra-Passe" id="password">
       </label>
       <label style="font-size: 12px;">
         <ion-checkbox class="checkbox-square" id="login-checkbox2" style="border: 0cm; top: 5px;">Remember me?</ion-checkbox>
       </label>
     </form>
-    <a ui-sref="tabsController.book()" id="login-button14" class="button button-positive button-block">Login</a>
+    <a id="login-button14" class="button button-positive button-block" onclick="login()">Login</a>
     <div id="login-markdown1" style="text-align:center;" class="show-list-numbers-and-dots">
       <p style="color:#000000;"><a href="index.html#/page1/page9">Sign up now </a>• <a href="#">Forgot Password </a> </p>
   </ion-content>
 </ion-view>
+
+<script>
+  function login() {
+    var email = document.getElementById("email").value;
+    var pw = document.getElementById("password").value;
+
+    if (email === localStorage['email'] && pw === localStorage['password']) {
+      localStorage['loggedIn'] = "true";
+      alert("Logged in!" + localStorage['loggedIn']);
+    } else {
+      alert("Incorrect Credentials!");
+    }
+  }
+</script>
