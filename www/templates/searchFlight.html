@@ -24,7 +24,7 @@
     height: auto;
   }
 
-  #details-button{
+  .details-button{
     position: relative;
     float: right;
     top: 8px;
@@ -44,7 +44,7 @@
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   }
 
-  #details-button:hover{
+  .details-button:hover{
     background-color: white;
     border: 2px solid #007aff;
     color: black;
@@ -153,25 +153,25 @@
         <img id="logo" src="img/sata.png">
         <h2>Madeira, Portugal</h2>
         <p>Lisbon, Portugal</p>
-        <button id="details-button">Details</button>
+        <button class="details-button">Details</button>
       </ion-item>
       <ion-item class="item-thumbnail-left" id="searchFlight-list-item46">
         <img id="logo" src="img/Transavia_logo.svg.png">
         <h2>Madeira, Portugal</h2>
         <p>Lisbon, Portugal</p>
-        <button id="details-button">Details</button>
+        <button class="details-button">Details</button>
       </ion-item>
       <ion-item class="item-thumbnail-left" id="searchFlight-list-item46">
         <img id="logo" src="img/tap.png">
         <h2>Madeira, Portugal</h2>
         <p>Lisbon, Portugal</p>
-        <button id="details-button">Details</button>
+        <button class="details-button">Details</button>
       </ion-item>
       <ion-item class="item-thumbnail-left" id="searchFlight-list-item46">
         <img id="logo" src="img/easy.png">
         <h2>Madeira, Portugal</h2>
         <p>Lisbon, Portugal</p>
-        <button id="details-button">Details</button>
+        <button class="details-button">Details</button>
       </ion-item>
       <ion-item class="item-thumbnail-left" id="searchFlight-list-item46">
         <img id="logo" src="img/vuelling.png">
@@ -207,6 +207,16 @@
 
     // Get the button that opens the modal
     var btn = document.getElementById("details-button");
+
+    var classname = document.getElementsByClassName("details-button");
+
+    var showModal = function() {
+        modal.style.display = "block";
+    };
+
+    for (var i = 0; i < classname.length; i++) {
+        classname[i].addEventListener('click', showModal, false);
+    }
 
     // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
