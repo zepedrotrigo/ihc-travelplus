@@ -64,15 +64,36 @@
       <ion-item class="item-icon-right" id="profile-list-item27" ui-sref="tabsController.alterarPalavraPasse()">Change Password
         <i class="icon ion-chevron-right"></i>
       </ion-item>
-      <ion-item id="profile-list-item28" ui-sref="tabsController.login()">Log Out</ion-item>
+      <ion-item id="profile-list-item28" ui-sref="tabsController.login()" onclick="logout()">Log Out</ion-item>
     </form>
-    <a ui-sref="tabsController.criarConta()" id="profile-button7" style="color:#FF0019;" class="button button-stable button-block">Eliminar Conta</a>
+    <a ui-sref="tabsController.book()" id="profile-button7" style="color:#FF0019;" class="button button-stable button-block" onclick="deleteAccount()">Eliminar Conta</a>
     <h4 id="profile-heading10" style="color:#000000;">Payment Method</h4>
     <form id="profile-form11" class="list">
-      <ion-item id="profile-list-item33">Cardholder<span class="span-item">Pedro Monteiro</span></ion-item>
+      <ion-item id="profile-list-item33">Cardholder<span class="span-item" id="cardholder"></span></ion-item>
       <ion-item id="profile-list-item34">Card Number<span class="span-item">**** **** **** 5678</span></ion-item>
       <ion-item id="profile-list-item35">Validity<span class="span-item">09/21</span></ion-item>
       <ion-item id="profile-list-item36">Security Code<span class="span-item">***</span></ion-item>
     </form>
   </ion-content>
 </ion-view>
+<script>
+  function deleteAccount() {
+    localStorage.clear();
+  }
+
+  function logout() {
+    localStorage['loggedIn'] = "false";
+  }
+
+  if (localStorage.getItem('loggedIn') === "false") {
+      document.location.href = "#/page1/page10";
+  } else {
+      document.location.href = "#/page1/page5";
+  }
+
+  document.getElementById("fname").innerHTML = localStorage.getItem('fname');
+  document.getElementById("lname").innerHTML = localStorage.getItem('lname');
+  document.getElementById("airport").innerHTML = localStorage.getItem('defaultAirport');
+  document.getElementById("email").innerHTML = localStorage.getItem('email');
+  document.getElementById("cardholder").innerHTML = localStorage.getItem('fname')+" "+localStorage.getItem('lname');
+</script>

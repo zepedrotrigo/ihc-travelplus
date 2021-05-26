@@ -16,22 +16,18 @@ function ($scope, $stateParams) {
 
 }])
    
-.controller('myFlightsCtrl', ['$scope', '$stateParams', '$state', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
+.controller('myFlightsCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams, $state) {
-    if (localStorage['loggedIn'] === "false") {
-        $state.go('tabsController.login');
-    }
+function ($scope, $stateParams) {
+
 }])
       
-.controller('profileCtrl', ['$scope', '$stateParams', '$state', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
+.controller('profileCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
-    function ($scope, $stateParams, $state) {
-        if (localStorage['loggedIn'] === "false") {
-            $state.go('tabsController.login');
-        }
+    function ($scope, $stateParams) {
+
 }])
    
 .controller('searchFlightCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller

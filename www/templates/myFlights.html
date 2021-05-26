@@ -76,3 +76,10 @@
     </ion-list>
   </ion-content>
 </ion-view>
+<script>
+  if (localStorage.getItem('loggedIn') === "false") {
+    document.location.href = "#/page1/page10";
+  } else {
+    document.location.href = "#/page1/page4";
+  }
+</script>

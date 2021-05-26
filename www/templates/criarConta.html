@@ -23,21 +23,57 @@
         <input type="password" placeholder="Password" id="password">
       </label>
       <label class="item item-input" id="criarConta-input17">
-        <input type="password" placeholder="Confirm Password">
+        <input type="password" placeholder="Confirm Password" id="password2">
       </label>
-      <button ui-sref="tabsController.login()" id="criarConta-button13" class="button button-positive button-block" onclick="register()">Create Account</button>
+      <button id="criarConta-button13" class="button button-positive button-block" onclick="register()">Create Account</button>
       <button ui-sref="tabsController.login()" id="criarConta-button10" class="button button-stable button-block">Cancel</button>
     </form>
   </ion-content>
 </ion-view>
 
 <script>
+  function isValidName(name) {
+    var re = /^[a-zA-Z ]{2,30}$/;
+    return re.test(name);
+  }
+
+  function isValidPhone(phone) {
+    var re = /9[1236][0-9]{7}|2[1-9][0-9]{7}/;
+    return re.test(phone);;
+  }
+
+  function isValidEmail(email) {
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+  }
+
   function register() {
-    localStorage['fname'] = document.getElementById("fname").value;
-    localStorage['lname'] = document.getElementById("lname").value;
-    localStorage['phone'] = document.getElementById("phone").value;
-    localStorage['email'] = document.getElementById("email").value;
-    localStorage['password'] = document.getElementById("password").value;
-    alert("Registered successfully!");
+    var fname = document.getElementById("fname").value;
+    var lname = document.getElementById("lname").value;
+    var phone = document.getElementById("phone").value;
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+    var password2 = document.getElementById("password2").value;
+
+    if (!isValidName(fname)) {
+      alert("Invalid first name!");
+    } else if (!isValidName(lname)) {
+      alert("Invalid last name!");
+    } else if (!isValidPhone(phone)) {
+      alert("Invalid phone number!");
+    } else if (!isValidEmail(email)) {
+      alert("Invalid email!");
+    } else if (password != password2) {
+      alert("Passwords do not match!");
+    } else {
+      localStorage['fname'] = fname;
+      localStorage['lname'] = document.getElementById("lname").value;
+      localStorage['phone'] = document.getElementById("phone").value;
+      localStorage['email'] = document.getElementById("email").value;
+      localStorage['password'] = document.getElementById("password").value;
+      localStorage['defaultAirport'] = "";
+      alert("Registered successfully!");
+      document.location.href = "#/page1/page10";
+    }
   }
 </script>

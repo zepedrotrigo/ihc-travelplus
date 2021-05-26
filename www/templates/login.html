@@ -23,9 +23,9 @@
     var email = document.getElementById("email").value;
     var pw = document.getElementById("password").value;
 
-    if (email === localStorage['email'] && pw === localStorage['password']) {
+    if (email === localStorage.getItem('email') && pw === localStorage.getItem('password')) {
       localStorage['loggedIn'] = "true";
-      alert("Logged in!" + localStorage['loggedIn']);
+      document.location.href = "#/page1/page5";
     } else {
       alert("Incorrect Credentials!");
     }
