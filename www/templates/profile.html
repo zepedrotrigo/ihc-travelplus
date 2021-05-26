@@ -14,10 +14,25 @@
     float: right; 
     font-size: 14px;
   }
+
   .input-right {
     float: right;
     height:1px;
   }
+
+  #span-airport{
+    display: flex;
+    justify-content: center;
+    align-items: center;       
+    }
+
+  #airport{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 3px 2px -2px lightgray;
+    width: 135px;
+    }  
 </style>
 
 <ion-view id="page5">
@@ -37,27 +52,27 @@
       </ion-item>
       <ion-item id="profile-list-item31">
         <span>Default Airport</span>
-        <span class="input-right">
+        <span class="input-right" id="span-airport">
           <input type="text" name="name" id="airport" placeholder="" size="4"/>
         </span>
       </ion-item>
     </form>
     <h4 id="profile-heading8" style="color:#000000;">My Account</h4>
     <form id="profile-form8" class="list">
-      <ion-toggle toggle-class="toggle-positive" id="profile-toggle2">Notificações</ion-toggle>
+      <ion-toggle toggle-class="toggle-positive" id="profile-toggle2">Notifications</ion-toggle>
       <ion-item id="email">Email<span class="span-item">admin@ua.pt</span></ion-item>
-      <ion-item class="item-icon-right" id="profile-list-item27" ui-sref="tabsController.alterarPalavraPasse()">Alterar Palavra-Passe
+      <ion-item class="item-icon-right" id="profile-list-item27" ui-sref="tabsController.alterarPalavraPasse()">Change Password
         <i class="icon ion-chevron-right"></i>
       </ion-item>
-      <ion-item id="profile-list-item28" ui-sref="tabsController.login()">Terminar Sessão</ion-item>
+      <ion-item id="profile-list-item28" ui-sref="tabsController.login()">Log Out</ion-item>
     </form>
     <a ui-sref="tabsController.criarConta()" id="profile-button7" style="color:#FF0019;" class="button button-stable button-block">Eliminar Conta</a>
-    <h4 id="profile-heading10" style="color:#000000;">Método de Pagamento</h4>
+    <h4 id="profile-heading10" style="color:#000000;">Payment Method</h4>
     <form id="profile-form11" class="list">
-      <ion-item id="profile-list-item33">Titular do Cartão<span class="span-item">Pedro Monteiro</span></ion-item>
-      <ion-item id="profile-list-item34">Número do Cartão<span class="span-item">**** **** **** 5678</span></ion-item>
-      <ion-item id="profile-list-item35">Validade mm/aa<span class="span-item">09/21</span></ion-item>
-      <ion-item id="profile-list-item36">Código Segurança<span class="span-item">***</span></ion-item>
+      <ion-item id="profile-list-item33">Cardholder<span class="span-item">Pedro Monteiro</span></ion-item>
+      <ion-item id="profile-list-item34">Card Number<span class="span-item">**** **** **** 5678</span></ion-item>
+      <ion-item id="profile-list-item35">Validity<span class="span-item">09/21</span></ion-item>
+      <ion-item id="profile-list-item36">Security Code<span class="span-item">***</span></ion-item>
     </form>
   </ion-content>
 </ion-view>
