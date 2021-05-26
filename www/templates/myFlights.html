@@ -44,46 +44,50 @@
       <a ui-sref="tabsController.favorites()" id="myFlights-button6" class="button button-stable button-small button-block">Favorites</a>
     </div>
     <ion-list id="myFlights-list3">
-      <ion-item class="item-thumbnail-left" id="myFlights-list-item2" ui-sref="tabsController.book()">
+      <ion-item class="item-thumbnail-left" id="myFlights-list-item2">
         <img id="thumbnail" src="img/HutWGo5IRCupJxmDu4dv_madeira.jpeg">
         <h2>Madeira, Portugal</h2>
         <p>Lisbon, Portugal</p>
-        <button id="buy-button">Buy</button>
+        <button id="buy-button" onclick="visitPage();">Buy</button>
       </ion-item>
-      <ion-item class="item-thumbnail-left" id="myFlights-list-item3" ui-sref="tabsController.book()">
+      <ion-item class="item-thumbnail-left" id="myFlights-list-item3">
         <img id="thumbnail" src="img/2eW1xoJT8qzTnEk2ftSQ_holland.png">
         <h2>Lisse, Holland</h2>
         <p>Lisbon, Portugal</p>
-        <button id="buy-button">Buy</button>
+        <button id="buy-button" onclick="visitPage();">Buy</button>
       </ion-item>
-      <ion-item class="item-thumbnail-left" id="myFlights-list-item4" ui-sref="tabsController.book()">
+      <ion-item class="item-thumbnail-left" id="myFlights-list-item4">
         <img id="thumbnail" src="img/VXADY99Q0umDCqYDYj6O_italy.jpg">
         <h2>Rome, Italy</h2>
         <p>Lisbon, Portugal</p>
-        <button id="buy-button">Buy</button>
+        <button id="buy-button" onclick="visitPage();">Buy</button>
       </ion-item>
-      <ion-item class="item-thumbnail-left" id="myFlights-list-item5" ui-sref="tabsController.book()">
+      <ion-item class="item-thumbnail-left" id="myFlights-list-item5">
         <img id="thumbnail" src="img/Osumpp9TM6m7lxE46hKA_barbados-medium.png">
         <h2>Bridgetown, Barbados</h2>
         <p>Lisbon, Portugal</p>
-        <button id="buy-button">Buy</button>
+        <button id="buy-button" onclick="visitPage();">Buy</button>
       </ion-item>
-      <ion-item class="item-thumbnail-left" id="myFlights-list-item7" ui-sref="tabsController.book()">
+      <ion-item class="item-thumbnail-left" id="myFlights-list-item7">
         <img id="thumbnail" src="img/BWSPyI9cQuzNUJLN9Hy4_greece.png">
         <h2>Athens, Greece</h2>
         <p>Lisbon, Portugal</p>
-        <button id="buy-button">Buy</button>
+        <button id="buy-button" onclick="visitPage();">Buy</button>
       </ion-item>
-      <ion-item class="item-thumbnail-left" id="myFlights-list-item9" ui-sref="tabsController.book()">
+      <ion-item class="item-thumbnail-left" id="myFlights-list-item9">
         <img id="thumbnail" src="img/rYpuYQEIR5qrE3rUzvei_azores.jpg">
         <h2>Azores, Portugal</h2>
         <p>Lisbon, Portugal</p>
-        <button id="buy-button">Buy</button>
+        <button id="buy-button" onclick="visitPage();">Buy</button>
       </ion-item>
     </ion-list>
   </ion-content>
 </ion-view>
 <script>
+    function visitPage(){
+        window.location='https://www.google.com/';
+    }
+
   if (localStorage.getItem('loggedIn') === "false") {
     document.location.href = "#/page1/page10";
   } else {

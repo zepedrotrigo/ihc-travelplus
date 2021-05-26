@@ -23,6 +23,32 @@
     width: 20%;
     height: auto;
   }
+
+  #buy-button{
+    position: relative;
+    float: right;
+    top: 8px;
+    background-color: #007aff;
+    border: 2px solid #007aff;
+    border-radius: 8%;
+    color: white;
+    padding: 6px 14px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 11px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+
+  #buy-button:hover{
+    background-color: white;
+    border: 2px solid #007aff;
+    color: black;
+  }
 </style>
 
 <ion-view id="page6">
@@ -47,16 +73,23 @@
           <option>Price</option>
         </select>
       </label>
-      <ion-item class="item-thumbnail-left" id="searchFlight-list-item45" ui-sref="tabsController.book_tab1()">
+      <ion-item class="item-thumbnail-left" id="searchFlight-list-item45">
         <img id="logo" src="img/sata.png">
         <h2 style="width: 100%;">Madeira, Portugal</h2>
         <p>Lisbon, Portugal</p>
+        <button id="buy-button" onclick="visitPage();">Details</button>
       </ion-item>
-      <ion-item class="item-thumbnail-left" id="searchFlight-list-item46" ui-sref="tabsController.book_tab1()">
+      <ion-item class="item-thumbnail-left" id="searchFlight-list-item46">
         <img id="logo" src="img/Transavia_logo.svg.png">
         <h2>Madeira, Portugal</h2>
         <p>Lisbon, Portugal</p>
+        <button id="buy-button" onclick="visitPage();">Details</button>
       </ion-item>
     </ion-list>
   </ion-content>
 </ion-view>
+<script>
+      function visitPage(){
+        window.location='https://www.google.com/';
+    }
+</script>
