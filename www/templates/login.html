@@ -22,12 +22,13 @@
   function login() {
     var email = document.getElementById("email").value;
     var pw = document.getElementById("password").value;
-
-    if (email === localStorage.getItem('email') && pw === localStorage.getItem('password')) {
+    localStorage['loggedIn'] = "true";
+    document.location.href = "#/page1/page5";
+    /*if (email === localStorage.getItem('email') && pw === localStorage.getItem('password')) {
       localStorage['loggedIn'] = "true";
       document.location.href = "#/page1/page5";
     } else {
       alert("Incorrect Credentials!");
-    }
+    }*/
   }
 </script>

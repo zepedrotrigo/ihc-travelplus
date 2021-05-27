@@ -19,15 +19,75 @@
     width: 50%;
   }
 
+  #searchFlight-list-item39{
+    float: left;
+    width: 30%;
+  }
+  #searchFlight-select7{
+    float:right;
+    width: 70%;
+    height: 54px;
+    vertical-align: auto;
+  }
+
+  #_label-0{
+    padding: 0px;
+    width: 22px;
+    margin: 0px;
+  }
+
+  #searchFlight-list-item45{
+    margin-top: 165px;
+  }
+
   #logo{
+    position: absolute;
+    vertical-align: auto;
+
     width: 30%;
     height: auto;
   }
 
+  #logo2{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30%;
+    height: auto;
+  }
+
+  #logo3{
+    position: absolute;
+    top: 0px;
+    right: 15px;
+    width: 30%;
+    height: auto;
+  }
+
+  #price{
+    position: absolute;
+    left: 50px;
+  }
+
+  .flightt{
+    float: left;
+    left:5px;
+    width: 75px; 
+    border-right: 2px solid black;
+    text-align: center;  
+  }
+
+  .flightt2{
+    float: left;
+    width:90px;
+    margin-left: 5px;
+    text-align: center;
+  }
+
   .details-button{
-    position: relative;
-    float: right;
-    top: 8px;
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
     background-color: #007aff;
     border: 2px solid #007aff;
     border-radius: 8%;
@@ -135,9 +195,9 @@
       <ion-item class="item-icon-left" id="searchFlight-list-item20">
         <i class="icon ion-android-plane"></i>Spain</ion-item>
       <ion-item class="item-icon-left" id="searchFlight-list-item37">
-        <i class="icon ion-android-calendar"></i>11/11/1111</ion-item>
+        <i class="icon ion-android-calendar"></i>27/05/20221</ion-item>
       <ion-item class="item-icon-left" id="searchFlight-list-item38">
-        <i class="icon ion-android-calendar"></i>22/22/2222</ion-item>
+        <i class="icon ion-android-calendar"></i>15/06/2021</ion-item>
       <ion-item class="item-icon-left" id="searchFlight-list-item39">
         <i class="icon ion-person-stalker"></i>2</ion-item>
       <label class="item item-select" id="searchFlight-select7">
@@ -149,34 +209,75 @@
           <option>Price</option>
         </select>
       </label>
-      <ion-item class="item-thumbnail-left" id="searchFlight-list-item45">
+      <ion-item class="item-thumbnail-right" id="searchFlight-list-item45">
         <img id="logo" src="img/sata.png">
-        <h2>Madeira, Portugal</h2>
-        <p>Lisbon, Portugal</p>
+        <button class="details-button">Details</button>
+        <div class="flightt" >
+          <h2>GO</h2>
+          <p><i class="icon ion-arrow-up-c"></i>6:00am</p>
+          <p><i class="icon ion-arrow-down-c"></i>9:45am</p>
+          <h3 class="price">40€</h3>
+        </div>
+        <div class="flightt2">
+          <h2>AND COME</h2>
+          <p><i class="icon ion-arrow-up-c"></i>10:15pm</p>
+          <p><i class="icon ion-arrow-down-c"></i>0:30am</p>
+          <h3 class="price">92€</h3>
+        </div>
+      </ion-item>
+      <ion-item class="item-thumbnail-right" id="searchFlight-list-item46">
+        <img id="logo2" src="img/Transavia_logo.svg.png">
+        <div class="flightt" >
+          <h2>GO</h2>
+          <p><i class="icon ion-arrow-up-c"></i>6:00am</p>
+          <p><i class="icon ion-arrow-down-c"></i>9:45am</p>
+          <h3 class="price">40€</h3>
+        </div>
+        <div class="flightt2">
+          <h2>AND COME</h2>
+          <p><i class="icon ion-arrow-up-c"></i>10:15pm</p>
+          <p><i class="icon ion-arrow-down-c"></i>0:30am</p>
+          <h3 class="price">92€</h3>
+        </div>
         <button class="details-button">Details</button>
       </ion-item>
-      <ion-item class="item-thumbnail-left" id="searchFlight-list-item46">
-        <img id="logo" src="img/Transavia_logo.svg.png">
-        <h2>Madeira, Portugal</h2>
-        <p>Lisbon, Portugal</p>
+      <ion-item class="item-thumbnail-right" id="searchFlight-list-item46">
+        <img id="logo3" src="img/tap.png">
+        <div class="flightt" >
+          <h2>GO</h2>
+          <p><i class="icon ion-arrow-up-c"></i>6:00am</p>
+          <p><i class="icon ion-arrow-down-c"></i>9:45am</p>
+          <h3 class="price">40€</h3>
+        </div>
+        <div class="flightt2">
+          <h2>AND COME</h2>
+          <p><i class="icon ion-arrow-up-c"></i>10:15pm</p>
+          <p><i class="icon ion-arrow-down-c"></i>0:30am</p>
+          <h3 class="price">92€</h3>
+        </div>
         <button class="details-button">Details</button>
       </ion-item>
-      <ion-item class="item-thumbnail-left" id="searchFlight-list-item46">
-        <img id="logo" src="img/tap.png">
-        <h2>Madeira, Portugal</h2>
-        <p>Lisbon, Portugal</p>
-        <button class="details-button">Details</button>
-      </ion-item>
-      <ion-item class="item-thumbnail-left" id="searchFlight-list-item46">
+      <ion-item class="item-thumbnail-right" id="searchFlight-list-item46">
         <img id="logo" src="img/easy.png">
-        <h2>Madeira, Portugal</h2>
-        <p>Lisbon, Portugal</p>
+        <div class="flightt" >
+          <h2>GO</h2>
+          <p><i class="icon ion-arrow-up-c"></i>6:00am</p>
+          <p><i class="icon ion-arrow-down-c"></i>9:45am</p>
+          <h3 class="price">40€</h3>
+        </div>
+        <div class="flightt2">
+          <h2>AND COME</h2>
+          <p><i class="icon ion-arrow-up-c"></i>10:15pm</p>
+          <p><i class="icon ion-arrow-down-c"></i>0:30am</p>
+          <h3 class="price">92€</h3>
+        </div>
         <button class="details-button">Details</button>
       </ion-item>
-      <ion-item class="item-thumbnail-left" id="searchFlight-list-item46">
+      <ion-item class="item-thumbnail-right" id="searchFlight-list-item46">
         <img id="logo" src="img/vuelling.png">
         <h2>Madeira, Portugal</h2>
         <p>Lisbon, Portugal</p>
+        <button class="details-button">Details</button>
 
 
         <div id="myModal" class="modal">
@@ -195,7 +296,7 @@
             <button id="favorite-button-modal">Add to Favorites</button>
           </div>
         </div>
-        <button id="details-button">Details</button>
+        <button id="details-button" style="display: none;">Details</button>
       </ion-item>
     </ion-list>
   </ion-content>
