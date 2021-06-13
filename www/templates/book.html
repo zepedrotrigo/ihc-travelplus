@@ -26,7 +26,7 @@
         <i class="icon ion-plane placeholder-icon"></i>
         <input type="search" placeholder="To">
       </label>
-      <ion-checkbox class="checkbox-square" id="book-checkbox1" >Round Trip</ion-checkbox>
+      <ion-checkbox class="checkbox-square" id="book-checkbox1" onclick="validate()">Round Trip</ion-checkbox>
       <div id="book-container1">
         <form id="book-form16" class="list">
           <div>
@@ -39,7 +39,7 @@
               <select></select>
             </label>  -->
             <ion-item id="startdate">Start</ion-item>
-            <ion-item id="enddate">End</ion-item>
+            <ion-item id="enddate" style="display:none">End</ion-item>
           </div>
             <label class="item item-select" id="book-select2" name="book-passengers">
             <span class="input-label">Passengers</span>
@@ -71,5 +71,8 @@
         $("#enddate").datepicker();
         localStorage['loggedIn'] = "false";
     });
-    
+
+    function validate(){
+      $("#enddate").toggle();
+    }
 </script>
