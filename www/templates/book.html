@@ -11,6 +11,15 @@
   #book-select2{
     width: 100%;
   }
+
+  #icon1{
+    transform: rotate(45deg);
+  }
+
+  #icon2{
+    transform: rotate(135deg);
+  }
+
 </style>
 <ion-view id="page2">
   <ion-content padding="true" class="has-header">
@@ -19,11 +28,11 @@
     </div>
     <form id="book-form5" class="list">
       <label class="item item-input" id="book-search2" name="book-from">
-        <i class="icon ion-plane placeholder-icon"></i>
+        <i class="icon ion-plane placeholder-icon" id="icon1"></i>
         <input type="search" placeholder="From">
       </label>
       <label class="item item-input" id="book-search3" name="book-to">
-        <i class="icon ion-plane placeholder-icon"></i>
+        <i class="icon ion-plane placeholder-icon" id="icon2"></i>
         <input type="search" placeholder="To">
       </label>
       <ion-checkbox class="checkbox-square" id="book-checkbox1" onclick="toggle()">Round Trip</ion-checkbox>
