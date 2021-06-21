@@ -525,16 +525,12 @@
       <div id="book-container1">
         <form id="book-form16" class="list">
           <div>
-            <!--<label class="item item-select" id="book-select5">
-              <span class="input-label">Startpoint</span>
-              <select></select>
+            <label class="item item-input" id="startdate" name="start">
+              <input id="input-from" name="start" type="search" placeholder="Start">
             </label>
-            <label class="item item-select" id="book-select6">
-              <span class="input-label">Endpoint</span>
-              <select></select>
-            </label>  -->
-            <ion-item id="startdate">Start</ion-item>
-            <ion-item id="enddate" style="display:none">End</ion-item>
+            <label class="item item-input" id="enddate" name="end" style="display:none">
+              <input id="input-to" name="end" type="search" placeholder="End">
+            </label>
           </div>
             <label class="item item-select" id="book-select2" name="book-passengers">
             <span class="input-label">Passengers</span>
@@ -562,8 +558,6 @@
 
 <script>
     $(document).ready(function(){
-        $("#startdate").datepicker();
-        $("#enddate").datepicker();
         localStorage['loggedIn'] = "false";
     });
 
@@ -571,12 +565,47 @@
       $("#enddate").toggle();
     }
 
+    $(function() {
+      $('input[name="start"]').daterangepicker({
+          singleDatePicker: true,
+          autoUpdateInput: false,
+          locale: {
+              cancelLabel: 'Clear'
+          }
+      });
+
+      $('input[name="start"]').on('apply.daterangepicker', function(ev, picker) {
+          $(this).val(picker.startDate.format('MM/DD/YYYY'));
+      });
+
+      $('input[name="start"]').on('cancel.daterangepicker', function(ev, picker) {
+          $(this).val('');
+      });
+
+      $('input[name="end"]').daterangepicker({
+          singleDatePicker: true,
+          autoUpdateInput: false,
+          locale: {
+              cancelLabel: 'Clear'
+          }
+      });
+
+      $('input[name="end"]').on('apply.daterangepicker', function(ev, picker) {
+          $(this).val(picker.startDate.format('MM/DD/YYYY'));
+      });
+
+      $('input[name="end"]').on('cancel.daterangepicker', function(ev, picker) {
+          $(this).val('');
+      });
+    });
+
     // save input values to use in searchFlight.html
     function save_input() {
       var input_from = document.getElementById("input-from").value;
       var input_to = document.getElementById("input-to").value;
-      //var input_start = $('#startdate').val();
-      //var input_end = $('#enddate').val();
+      var input_start = $('#startdate').val();
+      var input_end = $('#enddate').val();
+      alert(input_start + " " + input_end)
       var input_passengers = document.getElementById("input-passengers").value;
       if (input_from == "" || input_to == "") {
         alert("Please select departure and arrival destinations!");
