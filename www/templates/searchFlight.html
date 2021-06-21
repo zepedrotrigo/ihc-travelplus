@@ -213,7 +213,7 @@
           <option>Price</option>
         </select>
       </label>
-      <ion-item class="item-thumbnail-right" id="searchFlight-list-item45">
+      <ion-item class="item-thumbnail-right" id="searchFlight-list-item41">
         <img id="logo" src="img/sata.png">
         <button class="details-button" onclick="updateModal(1)">Details</button>
         <div class="flightt" >
@@ -229,7 +229,7 @@
           <h3 class="price"></h3>
         </div>
       </ion-item>
-      <ion-item class="item-thumbnail-right" id="searchFlight-list-item46">
+      <ion-item class="item-thumbnail-right" id="searchFlight-list-item42">
         <img id="logo2" src="img/Transavia_logo.svg.png">
         <div class="flightt" >
           <h2>GO</h2>
@@ -245,7 +245,7 @@
         </div>
         <button class="details-button" onclick="updateModal(2)">Details</button>
       </ion-item>
-      <ion-item class="item-thumbnail-right" id="searchFlight-list-item46">
+      <ion-item class="item-thumbnail-right" id="searchFlight-list-item43">
         <img id="logo3" src="img/tap.png">
         <div class="flightt" >
           <h2>GO</h2>
@@ -261,7 +261,7 @@
         </div>
         <button class="details-button" onclick="updateModal(3)">Details</button>
       </ion-item>
-      <ion-item class="item-thumbnail-right" id="searchFlight-list-item46">
+      <ion-item class="item-thumbnail-right" id="searchFlight-list-item44">
         <img id="logo" src="img/easy.png">
         <div class="flightt" >
           <h2>GO</h2>
@@ -277,7 +277,7 @@
         </div>
         <button class="details-button" onclick="updateModal(4)">Details</button>
       </ion-item>
-      <ion-item class="item-thumbnail-right" id="searchFlight-list-item46">
+      <ion-item class="item-thumbnail-right" id="searchFlight-list-item45">
         <img id="logo" src="img/easy.png">
         <div class="flightt" >
           <h2>GO</h2>
@@ -473,4 +473,13 @@
     for (var j = 0; j < 6; j++) {
       seats.push(randomNumber(parseInt(localStorage.getItem('fly_passengers')), 35));
     };
+
+    //change random results to display (from 1 to 6)
+    var rnd_id;
+    results = ["searchFlight-list-item41", "searchFlight-list-item42", "searchFlight-list-item43", "searchFlight-list-item44","searchFlight-list-item45", "searchFlight-list-item46"]
+    var rng = randomNumber(2, 5);
+        
+    for (var i = 0; i < rng; i++) {
+      document.getElementById(results.pop()).remove();
+    }
 </script>
