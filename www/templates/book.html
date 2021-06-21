@@ -526,10 +526,10 @@
         <form id="book-form16" class="list">
           <div>
             <label class="item item-input" id="startdate" name="start">
-              <input id="input-from" name="start" type="search" placeholder="Start">
+              <input id="input-start" name="start" type="search" inputmode="none" placeholder="Start">
             </label>
             <label class="item item-input" id="enddate" name="end" style="display:none">
-              <input id="input-to" name="end" type="search" placeholder="End">
+              <input id="input-end" name="end" type="search" inputmode="none" placeholder="End">
             </label>
           </div>
             <label class="item item-select" id="book-select2" name="book-passengers">
@@ -603,9 +603,8 @@
     function save_input() {
       var input_from = document.getElementById("input-from").value;
       var input_to = document.getElementById("input-to").value;
-      var input_start = $('#startdate').val();
-      var input_end = $('#enddate').val();
-      alert(input_start + " " + input_end)
+      var input_start = document.getElementById("input-start").value;
+      var input_end = document.getElementById("input-end").value;
       var input_passengers = document.getElementById("input-passengers").value;
       if (input_from == "" || input_to == "") {
         alert("Please select departure and arrival destinations!");
