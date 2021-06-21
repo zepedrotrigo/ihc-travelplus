@@ -195,15 +195,15 @@
   <ion-content padding="true" class="has-header">
     <ion-list id="searchFlight-list6">
       <ion-item class="item-icon-left" id="searchFlight-list-item19">
-        <i class="icon ion-android-plane" id="icon1"></i>Albania</ion-item>
+        <i class="icon ion-android-plane" id="icon1"></i> </ion-item>
       <ion-item class="item-icon-left" id="searchFlight-list-item20">
-        <i class="icon ion-android-plane" id="icon2"></i>Spain</ion-item>
+        <i class="icon ion-android-plane" id="icon2"></i> </ion-item>
       <ion-item class="item-icon-left" id="searchFlight-list-item37">
         <i class="icon ion-android-calendar"></i>27/05/20221</ion-item>
       <ion-item class="item-icon-left" id="searchFlight-list-item38">
         <i class="icon ion-android-calendar"></i>15/06/2021</ion-item>
       <ion-item class="item-icon-left" id="searchFlight-list-item39">
-        <i class="icon ion-person-stalker"></i>2</ion-item>
+        <i class="icon ion-person-stalker"></i> </ion-item>
       <label class="item item-select" id="searchFlight-select7">
         <span class="input-label">Sort</span>
         <select>
@@ -384,7 +384,12 @@
       while (num.length < size) num = "0" + num;
       return num;
     }
-    
+
+    //change fly-from e fly-to countries text
+    document.getElementById("searchFlight-list-item19").innerHTML += localStorage.getItem('fly_from');
+    document.getElementById("searchFlight-list-item20").innerHTML += localStorage.getItem('fly_to');
+    document.getElementById("searchFlight-list-item39").innerHTML += localStorage.getItem('fly_passengers');
+
     // generate random prices
     var text = document.querySelectorAll(".price");
     text.forEach(element => element.innerHTML += randomNumber(40, 99)+'€');

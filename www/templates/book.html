@@ -29,11 +29,11 @@
     <form id="book-form5" class="list">
       <label class="item item-input" id="book-search2" name="book-from">
         <i class="icon ion-plane placeholder-icon" id="icon1"></i>
-        <input type="search" placeholder="From">
+        <input id="input-from" type="search" placeholder="From">
       </label>
       <label class="item item-input" id="book-search3" name="book-to">
         <i class="icon ion-plane placeholder-icon" id="icon2"></i>
-        <input type="search" placeholder="To">
+        <input id="input-to" type="search" placeholder="To">
       </label>
       <ion-checkbox class="checkbox-square" id="book-checkbox1" onclick="toggle()">Round Trip</ion-checkbox>
       <div id="book-container1">
@@ -52,7 +52,7 @@
           </div>
             <label class="item item-select" id="book-select2" name="book-passengers">
             <span class="input-label">Passengers</span>
-            <select>
+            <select id="input-passengers">
               <option>1</option>
               <option>2</option>
               <option>3</option>
@@ -70,7 +70,7 @@
         </form>
       </div>
     </form>
-    <a ui-sref="searchFlight()" id="book-button1" class="button button-positive button-block">Search</a>
+    <a ui-sref="searchFlight()" onclick="save_input()" id="book-button1" class="button button-positive button-block">Search</a>
   </ion-content>
 </ion-view>
 
@@ -83,5 +83,17 @@
 
     function toggle(){
       $("#enddate").toggle();
+    }
+
+    // save input values to use in searchFlight.html
+    function save_input() {
+      var input_from = document.getElementById("input-from").value;
+      var input_to = document.getElementById("input-to").value;
+      //var input_start = $('#startdate').val();
+      //var input_end = $('#enddate').val();
+      var input_passengers = document.getElementById("input-passengers").value;
+      localStorage['fly_from'] = input_from;
+      localStorage['fly_to'] = input_to;
+      localStorage['fly_passengers'] = input_passengers;
     }
 </script>
