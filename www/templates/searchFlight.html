@@ -199,9 +199,9 @@
       <ion-item class="item-icon-left" id="searchFlight-list-item20">
         <i class="icon ion-android-plane" id="icon2"></i> </ion-item>
       <ion-item class="item-icon-left" id="searchFlight-list-item37">
-        <i class="icon ion-android-calendar"></i>27/05/20221</ion-item>
+        <i class="icon ion-android-calendar" id="start-date"></i></ion-item>
       <ion-item class="item-icon-left" id="searchFlight-list-item38">
-        <i class="icon ion-android-calendar"></i>15/06/2021</ion-item>
+        <i class="icon ion-android-calendar" id="end-date"></i>ㅤ</ion-item>
       <ion-item class="item-icon-left" id="searchFlight-list-item39">
         <i class="icon ion-person-stalker"></i> </ion-item>
       <label class="item item-select" id="searchFlight-select7">
@@ -323,6 +323,7 @@
       <p id="modal_to">To: </p>
       <p >Airport: Santa Maria</p>
       <p id="modal_airline">Airline: </p>
+      <p id="modal_date">Date: </p>
       <p id="modal_go">Departure: </p>
       <p id="modal_return">Arrival: </p>
       <p id="modal_price">Price: </p>
@@ -349,8 +350,9 @@
     }
 
     function updateModal(i) {
-      document.getElementById("modal_from").innerHTML ="From: " + localStorage.getItem('fly_from');
-      document.getElementById("modal_to").innerHTML ="To: " + localStorage.getItem('fly_to');
+      document.getElementById("modal_from").innerHTML = "From: " + localStorage.getItem('fly_from');
+      document.getElementById("modal_to").innerHTML = "To: " + localStorage.getItem('fly_to');
+      document.getElementById("modal_date").innerHTML = "Date: " + localStorage.getItem("fly_start");
       
       switch(i) {
         case 1:
@@ -439,11 +441,12 @@
         modal.style.display = "none";
       }
     }
-    //change fly-from e fly-to countries text
+    //change fly-from e fly-to countries text and date
     document.getElementById("searchFlight-list-item19").innerHTML += localStorage.getItem('fly_from');
     document.getElementById("searchFlight-list-item20").innerHTML += localStorage.getItem('fly_to');
     document.getElementById("searchFlight-list-item39").innerHTML += localStorage.getItem('fly_passengers');
-
+    document.getElementById("searchFlight-list-item37").innerHTML += localStorage.getItem('fly_start');
+    document.getElementById("searchFlight-list-item38").innerHTML += localStorage.getItem('fly_end');
     // generate random prices
     var text = document.querySelectorAll(".price");
     text.forEach(element => element.innerHTML += randomNumber(40, 99)+'€');

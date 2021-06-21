@@ -561,8 +561,11 @@
         localStorage['loggedIn'] = "false";
     });
 
+    var roundtrip = false;
+
     function toggle(){
       $("#enddate").toggle();
+      roundtrip = true;
     }
 
     $(function() {
@@ -610,10 +613,14 @@
         alert("Please select departure and arrival destinations!");
       } else if (input_from === input_to) {
         alert("Departure and arrival destinations cannot be the same!");
-      }else {
+      } else if (input_start === input_end || input_start === "" || (roundtrip && input_end === "")) {
+        alert("Invalid date!");
+      } else {
         localStorage['fly_from'] = input_from;
         localStorage['fly_to'] = input_to;
         localStorage['fly_passengers'] = input_passengers;
+        localStorage['fly_start'] = input_start;
+        localStorage['fly_end'] = input_end;
         window.location='index.html#/page6'
         window.location.reload();
       }
