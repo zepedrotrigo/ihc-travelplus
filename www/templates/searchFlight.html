@@ -349,8 +349,8 @@
     }
 
     function updateModal(i) {
-      document.getElementById("modal_from").innerHTML ="From: "+localStorage.getItem('fly_from');
-      document.getElementById("modal_to").innerHTML ="To: "+localStorage.getItem('fly_to');
+      document.getElementById("modal_from").innerHTML ="From: "+document.getElementById("searchFlight-list-item19").innerHTML;
+      document.getElementById("modal_to").innerHTML ="To: "+document.getElementById("searchFlight-list-item20").innerHTML;
       
       switch(i) {
         case 1:
