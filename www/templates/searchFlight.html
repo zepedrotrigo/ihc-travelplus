@@ -423,9 +423,10 @@
     function updateModal(i) {
       document.getElementById("modal_from").innerHTML ="From: "+localStorage.getItem('fly_from');
       document.getElementById("modal_to").innerHTML ="To: "+localStorage.getItem('fly_to');
-
+      
       switch(i) {
         case 1:
+          document.getElementById("logo0").src = "img/sata.png"
           document.getElementById("modal_airline").innerHTML = "Airline: SATA";
           document.getElementById("modal_go").innerHTML = "Departure: " + document.getElementById("go1").innerHTML;
           document.getElementById("modal_return").innerHTML = "Arrival: " +  document.getElementById("return1").innerHTML;
@@ -433,6 +434,7 @@
           document.getElementById("modal_seats").innerHTML = "Available seats: " + seats[0];
           break;
         case 2:
+          document.getElementById("logo0").src = "img/Transavia_logo.svg.png"
           document.getElementById("modal_airline").innerHTML = "Airline: TRANSAVIA";
           document.getElementById("modal_go").innerHTML = "Departure: " + document.getElementById("go2").innerHTML;
           document.getElementById("modal_return").innerHTML = "Arrival: " +  document.getElementById("return2").innerHTML;
@@ -440,6 +442,7 @@
           document.getElementById("modal_seats").innerHTML = "Available seats: " + seats[1];
           break;
         case 3:
+          document.getElementById("logo0").src = "img/tap.png"
           document.getElementById("modal_airline").innerHTML = "Airline: TAP";
           document.getElementById("modal_go").innerHTML = "Departure: " + document.getElementById("go3").innerHTML;
           document.getElementById("modal_return").innerHTML = "Arrival: " +  document.getElementById("return3").innerHTML;
@@ -447,6 +450,7 @@
           document.getElementById("modal_seats").innerHTML = "Available seats: " + seats[2];
           break;
         case 4:
+          document.getElementById("logo0").src = "img/easy.png"
           document.getElementById("modal_airline").innerHTML = "Airline: EASYJET";
           document.getElementById("modal_go").innerHTML = "Departure: " + document.getElementById("go4").innerHTML;
           document.getElementById("modal_return").innerHTML = "Arrival: " +  document.getElementById("return4").innerHTML;
@@ -454,6 +458,7 @@
           document.getElementById("modal_seats").innerHTML = "Available seats: " + seats[3];
           break;
         case 5:
+          document.getElementById("logo0").src = "img/easy.png"
           document.getElementById("modal_airline").innerHTML = "Airline: EASYJET";
           document.getElementById("modal_go").innerHTML = "Departure: " + document.getElementById("go5").innerHTML;
           document.getElementById("modal_return").innerHTML = "Arrival: " +  document.getElementById("return5").innerHTML;
@@ -461,6 +466,7 @@
           document.getElementById("modal_seats").innerHTML = "Available seats: " + seats[4];
           break;
         case 6:
+          document.getElementById("logo0").src = "img/vuelling.png"
           document.getElementById("modal_airline").innerHTML = "Airline: VUELING";
           document.getElementById("modal_go").innerHTML = "Departure: " + document.getElementById("go6").innerHTML;
           document.getElementById("modal_return").innerHTML = "Arrival: " +  document.getElementById("return6").innerHTML;
