@@ -334,43 +334,6 @@
   </div>
 </ion-view>
 <script>  
-
-    // Get the modal
-    var modal = document.getElementById("myModal");
-
-    // Get the button that opens the modal
-    var btn = document.getElementById("details-button");
-
-    var classname = document.getElementsByClassName("details-button");
-
-    var showModal = function() {
-        modal.style.display = "block";
-    };
-
-    for (var i = 0; i < classname.length; i++) {
-        classname[i].addEventListener('click', showModal, false);
-    }
-
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-
-    // When the user clicks the button, open the modal 
-    btn.onclick = function() {
-      modal.style.display = "block";
-    }
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-      modal.style.display = "none";
-    }
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-
     function visitPage(){
         window.location='index.html#/page1';
     }
@@ -384,41 +347,6 @@
       while (num.length < size) num = "0" + num;
       return num;
     }
-
-    //change fly-from e fly-to countries text
-    document.getElementById("searchFlight-list-item19").innerHTML += localStorage.getItem('fly_from');
-    document.getElementById("searchFlight-list-item20").innerHTML += localStorage.getItem('fly_to');
-    document.getElementById("searchFlight-list-item39").innerHTML += localStorage.getItem('fly_passengers');
-
-    // generate random prices
-    var text = document.querySelectorAll(".price");
-    text.forEach(element => element.innerHTML += randomNumber(40, 99)+'€');
-
-    //generate random hours
-    minutes = ["00","15","30","45"];
-    go_times = [];
-    return_times = [];
-    //go hours
-    text = document.querySelectorAll(".go-times");
-    for (var i = 0; i < text.length; i++) {
-      var rand = randomNumber(0, 14);
-      var rnd = ` ${pad(rand,2)}:${minutes[Math.floor(Math.random() * minutes.length)]}h`
-      go_times.push(rand);
-      text[i].innerHTML += rnd;
-    }
-    
-    //return hours
-    text = document.querySelectorAll(".return-times");
-    for (var i = 0; i < text.length; i++) {
-      var rnd = ` ${pad(randomNumber(go_times[i], 23),2)}:${minutes[Math.floor(Math.random() * minutes.length)]}h`
-      text[i].innerHTML += rnd;
-    }
-
-    //update modal
-    seats = [];
-    for (var j = 0; j < 6; j++) {
-      seats.push(randomNumber(parseInt(localStorage.getItem('fly_passengers')), 35));
-    };
 
     function updateModal(i) {
       document.getElementById("modal_from").innerHTML ="From: "+localStorage.getItem('fly_from');
@@ -475,4 +403,74 @@
           break;
       }
     }
+
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("details-button");
+
+    var classname = document.getElementsByClassName("details-button");
+
+    var showModal = function() {
+        modal.style.display = "block";
+    };
+
+    for (var i = 0; i < classname.length; i++) {
+        classname[i].addEventListener('click', showModal, false);
+    }
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    //change fly-from e fly-to countries text
+    document.getElementById("searchFlight-list-item19").innerHTML += localStorage.getItem('fly_from');
+    document.getElementById("searchFlight-list-item20").innerHTML += localStorage.getItem('fly_to');
+    document.getElementById("searchFlight-list-item39").innerHTML += localStorage.getItem('fly_passengers');
+
+    // generate random prices
+    var text = document.querySelectorAll(".price");
+    text.forEach(element => element.innerHTML += randomNumber(40, 99)+'€');
+
+    //generate random hours
+    minutes = ["00","15","30","45"];
+    go_times = [];
+    return_times = [];
+    //go hours
+    text = document.querySelectorAll(".go-times");
+    for (var i = 0; i < text.length; i++) {
+      var rand = randomNumber(0, 14);
+      var rnd = ` ${pad(rand,2)}:${minutes[Math.floor(Math.random() * minutes.length)]}h`
+      go_times.push(rand);
+      text[i].innerHTML += rnd;
+    }
+    
+    //return hours
+    text = document.querySelectorAll(".return-times");
+    for (var i = 0; i < text.length; i++) {
+      var rnd = ` ${pad(randomNumber(go_times[i], 23),2)}:${minutes[Math.floor(Math.random() * minutes.length)]}h`
+      text[i].innerHTML += rnd;
+    }
+
+    //update modal
+    seats = [];
+    for (var j = 0; j < 6; j++) {
+      seats.push(randomNumber(parseInt(localStorage.getItem('fly_passengers')), 35));
+    };
 </script>
