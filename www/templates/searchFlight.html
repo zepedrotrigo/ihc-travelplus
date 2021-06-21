@@ -440,8 +440,8 @@
       }
     }
     //change fly-from e fly-to countries text
-    document.getElementById("searchFlight-list-item19").innerHTML += localStorage.getItem('fly_from');
-    document.getElementById("searchFlight-list-item20").innerHTML += localStorage.getItem('fly_to');
+    document.getElementById("searchFlight-list-item19").innerHTML += localStorage.getItem('fly_from').charAt(0).toUpperCase() + localStorage.getItem('fly_from').substring(1).toLowerCase();
+    document.getElementById("searchFlight-list-item20").innerHTML += localStorage.getItem('fly_to').charAt(0).toUpperCase() + localStorage.getItem('fly_to').substring(1).toLowerCase();
     document.getElementById("searchFlight-list-item39").innerHTML += localStorage.getItem('fly_passengers');
 
     // generate random prices
