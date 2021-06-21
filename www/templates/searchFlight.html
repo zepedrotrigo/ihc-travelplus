@@ -215,12 +215,12 @@
       </label>
       <ion-item class="item-thumbnail-right" id="searchFlight-list-item45">
         <img id="logo" src="img/sata.png">
-        <button class="details-button">Details</button>
+        <button class="details-button" onclick="updateModal(1)">Details</button>
         <div class="flightt" >
           <h2>GO</h2>
-          <p class="go-times"><i class="icon ion-arrow-up-c"></i></p>
-          <p class="return-times"><i class="icon ion-arrow-down-c"></i></p>
-          <h3 class="price"></h3>
+          <p id="go1" class="go-times"><i class="icon ion-arrow-up-c"></i></p>
+          <p id="return1" class="return-times"><i class="icon ion-arrow-down-c"></i></p>
+          <h3 id="price1" class="price"></h3>
         </div>
         <div class="flightt2">
           <h2>RETURN</h2>
@@ -233,9 +233,9 @@
         <img id="logo2" src="img/Transavia_logo.svg.png">
         <div class="flightt" >
           <h2>GO</h2>
-          <p class="go-times"><i class="icon ion-arrow-up-c"></i></p>
-          <p class="return-times"><i class="icon ion-arrow-down-c"></i></p>
-          <h3 class="price"></h3>
+          <p id="go2" class="go-times"><i class="icon ion-arrow-up-c"></i></p>
+          <p id="return2" class="return-times"><i class="icon ion-arrow-down-c"></i></p>
+          <h3 id="price2" class="price"></h3>
         </div>
         <div class="flightt2">
           <h2>RETURN</h2>
@@ -243,15 +243,15 @@
           <p class="return-times"><i class="icon ion-arrow-down-c"></i></p>
           <h3 class="price"></h3>
         </div>
-        <button class="details-button">Details</button>
+        <button class="details-button" onclick="updateModal(2)">Details</button>
       </ion-item>
       <ion-item class="item-thumbnail-right" id="searchFlight-list-item46">
         <img id="logo3" src="img/tap.png">
         <div class="flightt" >
           <h2>GO</h2>
-          <p class="go-times"><i class="icon ion-arrow-up-c"></i></p>
-          <p class="return-times"><i class="icon ion-arrow-down-c"></i></p>
-          <h3 class="price"></h3>
+          <p id="go3" class="go-times"><i class="icon ion-arrow-up-c"></i></p>
+          <p id="return3" class="return-times"><i class="icon ion-arrow-down-c"></i></p>
+          <h3 id="price3" class="price"></h3>
         </div>
         <div class="flightt2">
           <h2>RETURN</h2>
@@ -259,15 +259,15 @@
           <p class="return-times"><i class="icon ion-arrow-down-c"></i></p>
           <h3 class="price"></h3>
         </div>
-        <button class="details-button">Details</button>
+        <button class="details-button" onclick="updateModal(3)">Details</button>
       </ion-item>
       <ion-item class="item-thumbnail-right" id="searchFlight-list-item46">
         <img id="logo" src="img/easy.png">
         <div class="flightt" >
           <h2>GO</h2>
-          <p class="go-times"><i class="icon ion-arrow-up-c"></i></p>
-          <p class="return-times"><i class="icon ion-arrow-down-c"></i></p>
-          <h3 class="price"></h3>
+          <p id="go4" class="go-times"><i class="icon ion-arrow-up-c"></i></p>
+          <p id="return4" class="return-times"><i class="icon ion-arrow-down-c"></i></p>
+          <h3 id="price4" class="price"></h3>
         </div>
         <div class="flightt2">
           <h2>RETURN</h2>
@@ -275,15 +275,15 @@
           <p class="return-times"><i class="icon ion-arrow-down-c"></i></p>
           <h3 class="price"></h3>
         </div>
-        <button class="details-button">Details</button>
+        <button class="details-button" onclick="updateModal(4)">Details</button>
       </ion-item>
       <ion-item class="item-thumbnail-right" id="searchFlight-list-item46">
         <img id="logo" src="img/easy.png">
         <div class="flightt" >
           <h2>GO</h2>
-          <p class="go-times"><i class="icon ion-arrow-up-c"></i></p>
-          <p class="return-times"><i class="icon ion-arrow-down-c"></i></p>
-          <h3 class="price"></h3>
+          <p id="go5" class="go-times"><i class="icon ion-arrow-up-c"></i></p>
+          <p id="return5" class="return-times"><i class="icon ion-arrow-down-c"></i></p>
+          <h3 id="price5" class="price"></h3>
         </div>
         <div class="flightt2">
           <h2>RETURN</h2>
@@ -291,15 +291,15 @@
           <p class="return-times"><i class="icon ion-arrow-down-c"></i></p>
           <h3 class="price"></h3>
         </div>
-        <button class="details-button">Details</button>
+        <button class="details-button" onclick="updateModal(5)">Details</button>
       </ion-item>
       <ion-item class="item-thumbnail-right" id="searchFlight-list-item46">
         <img id="logo" src="img/vuelling.png">
         <div class="flightt" >
           <h2>GO</h2>
-          <p class="go-times"><i class="icon ion-arrow-up-c"></i></p>
-          <p class="return-times"><i class="icon ion-arrow-down-c"></i></p>
-          <h3 class="price"></h3>
+          <p id="go6" class="go-times"><i class="icon ion-arrow-up-c"></i></p>
+          <p id="return6" class="return-times"><i class="icon ion-arrow-down-c"></i></p>
+          <h3 id="price6" class="price"></h3>
         </div>
         <div class="flightt2">
           <h2>RETURN</h2>
@@ -307,7 +307,7 @@
           <p class="return-times"><i class="icon ion-arrow-down-c"></i></p>
           <h3 class="price"></h3>
         </div>
-        <button class="details-button">Details</button>
+        <button class="details-button" onclick="updateModal(6)">Details</button>
         <button id="details-button" style="display: none;">Details</button>
       </ion-item>
     </ion-list>
@@ -318,15 +318,15 @@
       <span class="close">&times;</span>
       <img id="logo0" src="img/sata.png">
       <p></p>
-      <p>From: Rinas, Albânia</p>
-      <p>Airport: Tirana Madre Teresa</p>
-      <p>To: Madrid, Spain</p>
-      <p>Airport: Madrid-Barajas</p>
-      <p>Airline: SATA</p>
-      <p>Departure: hh-mm</p>
-      <p>Arrival: hh-mm</p>
-      <p>Price: 40€</p>
-      <p>Available seats: 26</p>
+      <p id="modal_from">From: </p>
+      <p >Airport: Humberto Delgado</p>
+      <p id="modal_to">To: </p>
+      <p >Airport: Santa Maria</p>
+      <p id="modal_airline">Airline: </p>
+      <p id="modal_go">Departure: </p>
+      <p id="modal_return">Arrival: </p>
+      <p id="modal_price">Price: </p>
+      <p id="modal_seats">Available seats: </p>
       <hr>
       <button id="details-button-modal">Buy</button>
       <button id="favorite-button-modal">Add to Favorites</button>
@@ -412,5 +412,61 @@
     for (var i = 0; i < text.length; i++) {
       var rnd = ` ${pad(randomNumber(go_times[i], 23),2)}:${minutes[Math.floor(Math.random() * minutes.length)]}h`
       text[i].innerHTML += rnd;
+    }
+
+    //update modal
+    seats = [];
+    for (var j = 0; j < 6; j++) {
+      seats.push(randomNumber(parseInt(localStorage.getItem('fly_passengers')), 35));
+    };
+
+    function updateModal(i) {
+      document.getElementById("modal_from").innerHTML ="From: "+localStorage.getItem('fly_from');
+      document.getElementById("modal_to").innerHTML ="To: "+localStorage.getItem('fly_to');
+
+      switch(i) {
+        case 1:
+          document.getElementById("modal_airline").innerHTML = "Airline: SATA";
+          document.getElementById("modal_go").innerHTML = "Departure: " + document.getElementById("go1").innerHTML;
+          document.getElementById("modal_return").innerHTML = "Arrival: " +  document.getElementById("return1").innerHTML;
+          document.getElementById("modal_price").innerHTML = "Price: " +  document.getElementById("price1").innerHTML;
+          document.getElementById("modal_seats").innerHTML = "Available seats: " + seats[0];
+          break;
+        case 2:
+          document.getElementById("modal_airline").innerHTML = "Airline: TRANSAVIA";
+          document.getElementById("modal_go").innerHTML = "Departure: " + document.getElementById("go2").innerHTML;
+          document.getElementById("modal_return").innerHTML = "Arrival: " +  document.getElementById("return2").innerHTML;
+          document.getElementById("modal_price").innerHTML = "Price: " +  document.getElementById("price2").innerHTML;
+          document.getElementById("modal_seats").innerHTML = "Available seats: " + seats[1];
+          break;
+        case 3:
+          document.getElementById("modal_airline").innerHTML = "Airline: TAP";
+          document.getElementById("modal_go").innerHTML = "Departure: " + document.getElementById("go3").innerHTML;
+          document.getElementById("modal_return").innerHTML = "Arrival: " +  document.getElementById("return3").innerHTML;
+          document.getElementById("modal_price").innerHTML = "Price: " +  document.getElementById("price3").innerHTML;
+          document.getElementById("modal_seats").innerHTML = "Available seats: " + seats[2];
+          break;
+        case 4:
+          document.getElementById("modal_airline").innerHTML = "Airline: EASYJET";
+          document.getElementById("modal_go").innerHTML = "Departure: " + document.getElementById("go4").innerHTML;
+          document.getElementById("modal_return").innerHTML = "Arrival: " +  document.getElementById("return4").innerHTML;
+          document.getElementById("modal_price").innerHTML = "Price: " +  document.getElementById("price4").innerHTML;
+          document.getElementById("modal_seats").innerHTML = "Available seats: " + seats[3];
+          break;
+        case 5:
+          document.getElementById("modal_airline").innerHTML = "Airline: EASYJET";
+          document.getElementById("modal_go").innerHTML = "Departure: " + document.getElementById("go5").innerHTML;
+          document.getElementById("modal_return").innerHTML = "Arrival: " +  document.getElementById("return5").innerHTML;
+          document.getElementById("modal_price").innerHTML = "Price: " +  document.getElementById("price5").innerHTML;
+          document.getElementById("modal_seats").innerHTML = "Available seats: " + seats[4];
+          break;
+        case 6:
+          document.getElementById("modal_airline").innerHTML = "Airline: VUELING";
+          document.getElementById("modal_go").innerHTML = "Departure: " + document.getElementById("go6").innerHTML;
+          document.getElementById("modal_return").innerHTML = "Arrival: " +  document.getElementById("return6").innerHTML;
+          document.getElementById("modal_price").innerHTML = "Price: " +  document.getElementById("price6").innerHTML;
+          document.getElementById("modal_seats").innerHTML = "Available seats: " + seats[5];
+          break;
+      }
     }
 </script>
