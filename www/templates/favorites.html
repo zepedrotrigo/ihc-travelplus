@@ -52,21 +52,21 @@
     <ion-list id="favorites-list4">
       <ion-item class="item-thumbnail-left" id="favorites-list-item10"">
           <img id="thumbnail" src="img/HutWGo5IRCupJxmDu4dv_madeira.jpeg">
-          <i id="icon" class="icon ion-ios-heart" onclick="changeIcon(this)"></i>
+          <i id="icon" class="icon ion-ios-heart" onclick="confirmation(this)"></i>
         <h3>From: Paris, France</h3>
         <h3>To: Angola, Madagascar</h3>
         <button id="buy-button" onclick="visitPage();">Buy</button>
       </ion-item>
       <ion-item class="item-thumbnail-left" id="favorites-list-item11"">
         <img id="thumbnail" src="img/HutWGo5IRCupJxmDu4dv_madeira.jpeg">
-        <i id="icon" class="ion-ios-heart" onclick="changeIcon(this)"></i>
+        <i id="icon" class="ion-ios-heart" onclick="confirmation(this)"></i>
         <h3>From: Legoland, Saturno</h3>
         <h3>To: Madrid, Spain</h3>
         <button id="buy-button" onclick="visitPage();">Buy</button>
       </ion-item>
       <ion-item class="item-thumbnail-left" id="favorites-list-item12"">
         <img id="thumbnail" src="img/HutWGo5IRCupJxmDu4dv_madeira.jpeg">
-        <i id="icon" class="ion-ios-heart" onclick="changeIcon(this)"></i>
+        <i id="icon" class="ion-ios-heart" onclick="confirmation(this)"></i>
         <h3>From: Velhice, Swagland</h3>
         <h3>To: Warsaw, Poland</h3>
         <button id="buy-button" onclick="visitPage();">Buy</button>
@@ -75,8 +75,18 @@
   </ion-content>  
 </ion-view>
 <script>
-function changeIcon(x) {
-  x.classList.toggle("ion-ios-heart-outline");
+//function changeIcon(x) {
+  //x.classList.toggle("ion-ios-heart-outline");
+//}
+
+function confirmation(id){
+    var result = confirm("Remove from favorites?");
+    if(result){
+      document.getElementById(id).style.display = 'none';
+      return true;
+    } else{
+      return false;
+    }
 }
 
 function visitPage(){
