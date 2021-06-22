@@ -124,11 +124,11 @@ angular.module('app.routes', ['ionicUIRouter'])
   })
 
   .state('tabsController.pagamento', {
-    url: '/page11',
+    url: '/page12',
     views: {
       'tab3': {
         templateUrl: 'templates/pagamento.html',
-        controller: 'pagementoCtrl'
+        controller: 'pagamentoCtrl'
       }
     }
   })
