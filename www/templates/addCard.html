@@ -2,13 +2,13 @@
     <ion-content padding="true" class="has-header" style="text-align: center">
       <form id="alterarPalavraPasse-form12" class="list">
         <label class="item item-input" id="alterarPalavraPasse-input9">
-          <input type="password" placeholder="Cardholder">
+          <input type="text" placeholder="Cardholder">
         </label>
         <label class="item item-input" id="alterarPalavraPasse-input10">
-          <input type="password" placeholder="Card Number">
+          <input id="cardnumber" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
         </label>
         <label class="item item-input" id="alterarPalavraPasse-input11">
-          <input type="password" placeholder="Validity">
+          <input id="cardvalidity" type="text" placeholder="Validity">
         </label>
         <label class="item item-input" id="alterarPalavraPasse-input11">
           <input type="password" placeholder="Security Code">
@@ -25,7 +25,14 @@
       x.style.display = "none";
     }
     function confirm2() {
+      localStorage["cardvalidity"] = document.getElementById("cardvalidity").value;
+      var temp = document.getElementById("cardnumber").value;
+      var temp = temp.slice(-4)+" **** **** ****";
+      localStorage["cardnumber"] = temp;
       var x = document.getElementById("confirmation");
       x.style.display = "block";
+
+      window.location='index.html#/page1/page5';
+      window.location.reload();
     }
   </script>

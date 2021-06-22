@@ -73,8 +73,8 @@
     </ion-item>
     <form id="profile-form11" class="list">
       <ion-item id="profile-list-item33">Cardholder<span class="span-item" id="cardholder"></span></ion-item>
-      <ion-item id="profile-list-item34">Card Number<span class="span-item">**** **** **** 5678</span></ion-item>
-      <ion-item id="profile-list-item35">Validity<span class="span-item">09/21</span></ion-item>
+      <ion-item id="profile-list-item34">Card Number<span class="span-item" id="cardnumber">5678 **** **** ****</span></ion-item>
+      <ion-item id="profile-list-item35">Validity<span class="span-item" id="cardvalidity">09/21</span></ion-item>
       <ion-item id="profile-list-item36">Security Code<span class="span-item">***</span></ion-item>
     </form>
   </ion-content>
@@ -109,4 +109,7 @@
   document.getElementById("airport").innerHTML = localStorage.getItem('defaultAirport');
   document.getElementById("email").innerHTML = localStorage.getItem('email');
   document.getElementById("cardholder").innerHTML = localStorage.getItem('fname')+" "+localStorage.getItem('lname');
+  document.getElementById("cardnumber").innerHTML = localStorage.getItem('cardnumber');
+  document.getElementById("cardvalidity").innerHTML = localStorage.getItem('cardvalidity');
+
 </script>
