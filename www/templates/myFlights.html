@@ -88,7 +88,7 @@
         window.location='index.html#/page6';
     }
 
-  if (localStorage.getItem('loggedIn') === "false") {
+  if (localStorage.getItem('loggedIn') !== "true") {
     document.location.href = "#/page1/page10";
   } else {
     document.location.href = "#/page1/page4";

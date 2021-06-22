@@ -335,10 +335,6 @@
   </div>
 </ion-view>
 <script>  
-    function visitPage(){
-        window.location='index.html#/page1';
-    }
-
     function randomNumber(min, max) {  
       return Math.floor(Math.random() * (max - min) + min); 
     }
@@ -494,8 +490,13 @@
 
     //redirect to buy page
     function visitPage(){
-        window.location='index.html#/page1/page12';
-        //alert('test');
+      if (localStorage.getItem('loggedIn') !== "true") {
+        document.location.href = "#/page1/page10";
+        window.location.reload();
+      } else {
+        window.location='index.html#/page1/page12'
+        window.location.reload();
+      }
     }
 
 </script>
