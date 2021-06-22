@@ -53,23 +53,23 @@
       <ion-item class="item-thumbnail-left" id="favorites-list-item10"">
           <img id="thumbnail" src="img/HutWGo5IRCupJxmDu4dv_madeira.jpeg">
           <i id="icon" class="icon ion-ios-heart" onclick="confirmation(this)"></i>
-        <h3>From: Paris, France</h3>
-        <h3>To: Angola, Madagascar</h3>
-        <button id="buy-button" onclick="visitPage();">Buy</button>
+        <h3>From: Lisbon, Portugal</h3>
+        <h3>To: Madrid, Spain</h3>
+        <button id="buy-button" onclick="visitPage('Lisbon, Portugal', 'Madrid, Spain');">Buy</button>
       </ion-item>
       <ion-item class="item-thumbnail-left" id="favorites-list-item11"">
         <img id="thumbnail" src="img/HutWGo5IRCupJxmDu4dv_madeira.jpeg">
         <i id="icon" class="ion-ios-heart" onclick="confirmation(this)"></i>
-        <h3>From: Legoland, Saturno</h3>
-        <h3>To: Madrid, Spain</h3>
-        <button id="buy-button" onclick="visitPage();">Buy</button>
+        <h3>From: Lisbon, Portugal</h3>
+        <h3>To: Lisse, Holland</h3>
+        <button id="buy-button" onclick="visitPage('Lisbon, Portugal', 'Lisse, Holland');">Buy</button>
       </ion-item>
       <ion-item class="item-thumbnail-left" id="favorites-list-item12"">
         <img id="thumbnail" src="img/HutWGo5IRCupJxmDu4dv_madeira.jpeg">
         <i id="icon" class="ion-ios-heart" onclick="confirmation(this)"></i>
-        <h3>From: Velhice, Swagland</h3>
-        <h3>To: Warsaw, Poland</h3>
-        <button id="buy-button" onclick="visitPage();">Buy</button>
+        <h3>From: Lisbon, Portugal</h3>
+        <h3>To: Rome, Italy</h3>
+        <button id="buy-button" onclick="visitPage('Lisbon, Portugal', 'Rome, Italy');">Buy</button>
       </ion-item>
     </ion-list>
   </ion-content>  
@@ -89,7 +89,10 @@ function confirmation(id){
     }
 }
 
-function visitPage(){
-        window.location='index.html#/page6';
-    }
+function visitPage(from, to){
+  localStorage["fillDestination"] = from;
+  localStorage["fillDestination2"] = to;
+  window.location='index.html#/page1';
+  window.location.reload();
+  }
 </script>
