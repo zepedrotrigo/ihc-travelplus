@@ -86,8 +86,8 @@ function confirmation(id){
 }
 
 function visitPage(from, to){
-  localStorage["fillDestination"] = from;
-  localStorage["fillDestination2"] = to;
+  localStorage["fillDestination"] = to;
+  localStorage["fillDestination2"] = from;
   window.location='index.html#/page1';
   window.location.reload();
   }
