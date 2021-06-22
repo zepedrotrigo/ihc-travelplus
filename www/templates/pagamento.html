@@ -31,7 +31,13 @@
       </ion-item>
     </ion-list>
     <h4 id="pagamento-heading4" style="color:#000000;">Confirmar e Pagar</h4>
-    <button id="pagamento-button8" style="font-weight:500;border-radius:1px 1px 1px 1px;" class="button button-balanced button-block button-outline">Total 45€</button>
-    <button ui-sref="tabsController.login()" id="criarConta-button120" class="button button-stable button-block">Cancel</button>                                                                  
+    <button id="pagamento-button8" style="font-weight:500;border-radius:1px 1px 1px 1px;" class="button button-balanced button-block button-outline"></button>
+    <button id="criarConta-button120" class="button button-stable button-block" onclick="visitPage();">Cancel</button>                                                                  
   </ion-content>
 </ion-view>
+<script> 
+      document.getElementById("pagamento-button8").innerHTML += 'Total '+localStorage.getItem('price');
+      function visitPage(){
+        window.location='index.html#/page6';
+      }
+</script>
