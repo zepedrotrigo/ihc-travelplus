@@ -2,17 +2,17 @@
   <ion-content padding="true" class="manual-ios-statusbar-padding">
     <h4 id="pagamento-heading1" style="color:#000000;">Payment Method</h4>
     <div class="list card" id="pagamento-card21">
-      <ion-item class="item-avatar" id="pagamento-list-item10" onclick="changebackground();">
+      <ion-item class="item-avatar" id="pagamento-list-item10" onclick="changebackground('pagamento-list-item10')">
         <img src="img/lF3Zj4txRAy3iMwxT5DT_americanexpress-credit-debit-card-bank-transaction-32287.webp">
         <h2 id="card-name1"> Joaquim Madeira</h2>
         <p>6133 **** **** ****</p>
       </ion-item>
-      <ion-item class="item-avatar" id="pagamento-list-item17" onclick="changebackground2();">
+      <ion-item class="item-avatar" id="pagamento-list-item17" onclick="changebackground('pagamento-list-item17')">
         <img src="img/asHFywhTym0Xzz1qAEAC_transferir1.png">
         <h2 id="card-name2">Joaquina Nogueira</h2>
         <p>9011 **** **** ****</p>
       </ion-item>
-      <ion-item class="item-avatar" id="pagamento-list-item18" onclick="changebackground3();">
+      <ion-item class="item-avatar" id="pagamento-list-item18" onclick="changebackground('pagamento-list-item18')">
         <img src="img/I8lbAChRTOiz0pW7Etg7_mastercard-credit-debit-card-bank-transaction-32303.webp">
         <h2 id="card-name3">José Cid Nogueira</h2>
         <p>4231 **** **** ****</p>
@@ -53,35 +53,16 @@
     window.location='index.html#/page1';
   }
 
-  function changebackground(){
-    var x = document.getElementById("pagamento-list-item10");
-    if (x.style.backgroundColor === "lightgray") {
-      x.style.backgroundColor = "white";
-    } else {
-      x.style.backgroundColor = "lightgray";
-    }
-    //document.getElementById("pagamento-list-item10").style.backgroundColor = 'lightgray' ; 
-  }
+  function changebackground(id){
+    var x = document.getElementById(id);
 
-  function changebackground2(){
-    var x = document.getElementById("pagamento-list-item17");
-    if (x.style.backgroundColor === "lightgray") {
-      x.style.backgroundColor = "white";
-    } else {
-      x.style.backgroundColor = "lightgray";
-    }
-    //document.getElementById("pagamento-list-item17").style.backgroundColor = 'lightgray' ; 
-  }
+    var all = document.querySelectorAll('.item-avatar');
+    all[0].style.backgroundColor = "white";
+    all[1].style.backgroundColor = "white";
+    all[2].style.backgroundColor = "white";
 
-  function changebackground3(){
-    var x = document.getElementById("pagamento-list-item18");
-    if (x.style.backgroundColor === "lightgray") {
-      x.style.backgroundColor = "white";
-    } else {
+    if (x.style.backgroundColor === "white") {
       x.style.backgroundColor = "lightgray";
     }
-    //document.getElementById("pagamento-list-item18").style.backgroundColor = 'lightgray' ; 
   }
-    //document.getElementById("pagamento-list-item18").style.backgroundColor = 'lightgray' ; 
-  
 </script>
