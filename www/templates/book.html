@@ -72,6 +72,9 @@
 
 <script>
     document.getElementById("input-from").value = localStorage.getItem("fillDestination");
+    document.getElementById("input-to").value = localStorage.getItem("fillDestination2");
+    localStorage.removeItem("fillDestination");
+    localStorage.removeItem("fillDestination2");
     var roundtrip = false;
 
     function toggle(){
