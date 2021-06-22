@@ -21,7 +21,7 @@
     <div id="pagamento-button-bar1" class="button-bar"></div>
     <h4 id="pagamento-heading2" style="color:#000000;">Add payment method</h4>
     <ion-list id="pagamento-list1">
-      <ion-item class="item-icon-left item-icon-right" id="pagamento-list-item12">
+      <ion-item class="item-icon-left item-icon-right" id="pagamento-list-item12" onclick="addCard()">
         <i class="icon ion-card"></i>Card
         <i class="icon ion-ios-arrow-forward"></i>
       </ion-item>
@@ -41,7 +41,8 @@
   document.getElementById("card-name2").innerHTML = localStorage.getItem("fname") +" "+ localStorage.getItem("lname");
   document.getElementById("card-name3").innerHTML = localStorage.getItem("fname") +" "+ localStorage.getItem("lname");
 
-  
+  var all = document.querySelectorAll('.item-avatar');
+  all[0].style.backgroundColor = "lightgray";
 
   function visitPage(){
     window.location='index.html#/page6';
@@ -51,6 +52,11 @@
   function buySucess(){
     alert('Flight successfuly purchased! Enjoy the trip!');
     window.location='index.html#/page1';
+  }
+
+  function addCard(){
+    window.location='index.html#/page1/page5';
+    window.location.reload();
   }
 
   function changebackground(id){
