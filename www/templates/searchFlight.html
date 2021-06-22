@@ -311,7 +311,7 @@
         <button id="details-button" style="display: none;">Details</button>
       </ion-item>
     </ion-list>
-    <button ui-sref="tabsController.book()" onclick="visitPage();" id="button-back" class="button button-stable button-block">Back</button>
+    <button ui-sref="tabsController.book()" onclick="goBack()" id="button-back" class="button button-stable button-block">Back</button>
   </ion-content>
   <div id="myModal" class="modal">
     <div class="modal-content">
@@ -497,6 +497,11 @@
         window.location='index.html#/page1/page12'
         window.location.reload();
       }
+    }
+
+    function goBack(){
+      window.location='index.html#/page1';
+      window.location.reload();
     }
 
 </script>

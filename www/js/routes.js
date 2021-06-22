@@ -106,7 +106,7 @@ angular.module('app.routes', ['ionicUIRouter'])
   .state('tabsController.criarConta', {
     url: '/page9',
     views: {
-      'tab4': {
+      'tab2': {
         templateUrl: 'templates/criarConta.html',
         controller: 'criarContaCtrl'
       }
@@ -116,7 +116,7 @@ angular.module('app.routes', ['ionicUIRouter'])
   .state('tabsController.login', {
     url: '/page10',
     views: {
-      'tab4': {
+      'tab2': {
         templateUrl: 'templates/login.html',
         controller: 'loginCtrl'
       }
@@ -126,7 +126,7 @@ angular.module('app.routes', ['ionicUIRouter'])
   .state('tabsController.pagamento', {
     url: '/page12',
     views: {
-      'tab4': {
+      'tab2': {
         templateUrl: 'templates/pagamento.html',
         controller: 'pagamentoCtrl'
       }
