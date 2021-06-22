@@ -123,6 +123,16 @@ angular.module('app.routes', ['ionicUIRouter'])
     }
   })
 
+  .state('tabsController.pagamento', {
+    url: '/page11',
+    views: {
+      'tab3': {
+        templateUrl: 'templates/pagamento.html',
+        controller: 'pagementoCtrl'
+      }
+    }
+  })
+
 $urlRouterProvider.otherwise('/page1/tab1/page2')
 
 
