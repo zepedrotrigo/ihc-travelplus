@@ -133,6 +133,16 @@ angular.module('app.routes', ['ionicUIRouter'])
     }
   })
 
+  .state('tabsController.addCard', {
+    url: '/page13',
+    views: {
+      'tab2': {
+        templateUrl: 'templates/addCard.html',
+        controller: 'addCardCtrl'
+      }
+    }
+  })
+
 $urlRouterProvider.otherwise('/page1/tab1/page2')
 
 

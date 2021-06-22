@@ -1,0 +1,30 @@
+<ion-view id="page13">
+    <ion-content padding="true" class="has-header" style="text-align: center">
+      <form id="alterarPalavraPasse-form12" class="list">
+        <label class="item item-input" id="alterarPalavraPasse-input9">
+          <input type="password" placeholder="Palavra-Passe Antiga">
+        </label>
+      </form>
+      <form id="alterarPalavraPasse-form13" class="list">
+        <label class="item item-input" id="alterarPalavraPasse-input10">
+          <input type="password" placeholder="Nova Palavra-Passe">
+        </label>
+        <label class="item item-input" id="alterarPalavraPasse-input11">
+          <input type="password" placeholder="Confirmar Palavra-Passe">
+        </label>
+      </form>
+      <button id="alterarPalavraPasse-button8" class="button button-positive button-block" style=" margin-top:0px; margin-right: 3px;" onclick="confirm2()">Alterar</button>
+      <a ui-sref="tabsController.profile()" id="alterarPalavraPasse-button9" class="button button-stable button-block" style=" margin-top:0px; margin-left: 3px;border: 1px solid rgba(95, 93, 93, 0.111) " onclick="confirm()">Cancelar</a>
+      <p style="color:green; margin-bottom: 10px; display: none;" id="confirmation">Palavra-passe alterada com sucesso</p>
+    </ion-content>
+  </ion-view>
+  <script>
+    function confirm() {
+      var x = document.getElementById("confirmation");
+      x.style.display = "none";
+    }
+    function confirm2() {
+      var x = document.getElementById("confirmation");
+      x.style.display = "block";
+    }
+  </script>
