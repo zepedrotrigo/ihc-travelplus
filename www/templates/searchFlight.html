@@ -329,7 +329,7 @@
       <p id="modal_price">Price: </p>
       <p id="modal_seats">Available seats: </p>
       <hr>
-      <button id="details-button-modal" href="#/page1/page12">Buy</button>
+      <button id="details-button-modal" onclick="visitPage();">Buy</button>
       <button id="favorite-button-modal">Add to Favorites</button>
     </div>
   </div>
@@ -485,4 +485,11 @@
     for (var i = 0; i < rng; i++) {
       document.getElementById(results.pop()).remove();
     }
+
+    //redirect to buy page
+    function visitPage(){
+        window.location='index.html#/page1/page12';
+        //alert('test');
+    }
+
 </script>
