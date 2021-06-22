@@ -36,52 +36,52 @@
   </ion-content>
 </ion-view>
 <script>
-      document.getElementById("pagamento-button8").innerHTML += 'Total '+localStorage.getItem('price');
-      document.getElementById("card-name1") = document.getElementById("fname") + document.getElementById("lname")
-      document.getElementById("card-name2") = document.getElementById("fname") + document.getElementById("lname")
-      document.getElementById("card-name3") = document.getElementById("fname") + document.getElementById("lname")
+  document.getElementById("pagamento-button8").innerHTML = 'Total '+localStorage.getItem('price');
+  document.getElementById("card-name1").innerHTML = localStorage.getItem("fname") +" "+ localStorage.getItem("lname");
+  document.getElementById("card-name2").innerHTML = localStorage.getItem("fname") +" "+ localStorage.getItem("lname");
+  document.getElementById("card-name3").innerHTML = localStorage.getItem("fname") +" "+ localStorage.getItem("lname");
 
-      
+  
 
-      function visitPage(){
-        window.location='index.html#/page6';
-        window.location.reload();
-      }
+  function visitPage(){
+    window.location='index.html#/page6';
+    window.location.reload();
+  }
 
-      function buySucess(){
-        alert('Flight successfuly purchased! Enjoy the trip!');
-        window.location='index.html#/page1';
-      }
+  function buySucess(){
+    alert('Flight successfuly purchased! Enjoy the trip!');
+    window.location='index.html#/page1';
+  }
 
-      function changebackground(){
-        var x = document.getElementById("pagamento-list-item10");
-        if (x.style.backgroundColor === "lightgray") {
-          x.style.backgroundColor = "white";
-        } else {
-          x.style.backgroundColor = "lightgray";
-        }
-	      //document.getElementById("pagamento-list-item10").style.backgroundColor = 'lightgray' ; 
-      }
+  function changebackground(){
+    var x = document.getElementById("pagamento-list-item10");
+    if (x.style.backgroundColor === "lightgray") {
+      x.style.backgroundColor = "white";
+    } else {
+      x.style.backgroundColor = "lightgray";
+    }
+    //document.getElementById("pagamento-list-item10").style.backgroundColor = 'lightgray' ; 
+  }
 
-      function changebackground2(){
-        var x = document.getElementById("pagamento-list-item17");
-        if (x.style.backgroundColor === "lightgray") {
-          x.style.backgroundColor = "white";
-        } else {
-          x.style.backgroundColor = "lightgray";
-        }
-	      //document.getElementById("pagamento-list-item17").style.backgroundColor = 'lightgray' ; 
-      }
+  function changebackground2(){
+    var x = document.getElementById("pagamento-list-item17");
+    if (x.style.backgroundColor === "lightgray") {
+      x.style.backgroundColor = "white";
+    } else {
+      x.style.backgroundColor = "lightgray";
+    }
+    //document.getElementById("pagamento-list-item17").style.backgroundColor = 'lightgray' ; 
+  }
 
-      function changebackground3(){
-        var x = document.getElementById("pagamento-list-item18");
-        if (x.style.backgroundColor === "lightgray") {
-          x.style.backgroundColor = "white";
-        } else {
-          x.style.backgroundColor = "lightgray";
-        }
-	      //document.getElementById("pagamento-list-item18").style.backgroundColor = 'lightgray' ; 
-      }
-        //document.getElementById("pagamento-list-item18").style.backgroundColor = 'lightgray' ; 
-      
+  function changebackground3(){
+    var x = document.getElementById("pagamento-list-item18");
+    if (x.style.backgroundColor === "lightgray") {
+      x.style.backgroundColor = "white";
+    } else {
+      x.style.backgroundColor = "lightgray";
+    }
+    //document.getElementById("pagamento-list-item18").style.backgroundColor = 'lightgray' ; 
+  }
+    //document.getElementById("pagamento-list-item18").style.backgroundColor = 'lightgray' ; 
+  
 </script>
