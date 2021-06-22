@@ -68,6 +68,9 @@
     </form>
     <a ui-sref="tabsController.book()" id="profile-button7" style="color:#FF0019;" class="button button-stable button-block" onclick="deleteAccount()">Eliminar Conta</a>
     <h4 id="profile-heading10" style="color:#000000;">Payment Method</h4>
+    <ion-item class="item-icon-right" id="profile-list-item27" onclick="visitPage()">Change Card
+      <i class="icon ion-chevron-right"></i>
+    </ion-item>
     <form id="profile-form11" class="list">
       <ion-item id="profile-list-item33">Cardholder<span class="span-item" id="cardholder"></span></ion-item>
       <ion-item id="profile-list-item34">Card Number<span class="span-item">**** **** **** 5678</span></ion-item>
@@ -90,6 +93,16 @@
   } else {
       document.location.href = "#/page1/page5";
   }
+
+  function visitPage(){
+      if (localStorage.getItem('loggedIn') !== "true") {
+        document.location.href = "#/page1/page13";
+        window.location.reload();
+      } else {
+        window.location='index.html#/page1/page13'
+        window.location.reload();
+      }
+    }
 
   document.getElementById("fname").innerHTML = localStorage.getItem('fname');
   document.getElementById("lname").innerHTML = localStorage.getItem('lname');
