@@ -50,23 +50,23 @@
       <button id="favorites-button12" class="button button-stable button-small button-block">Favorites</button>
     </div>
     <ion-list id="favorites-list4">
-      <ion-item class="item-thumbnail-left" id="favorites-list-item10"">
+      <ion-item class="item-thumbnail-left" id="favorites-list-item10">
           <img id="thumbnail" src="img/HutWGo5IRCupJxmDu4dv_madeira.jpeg">
-          <i id="icon" class="icon ion-ios-heart" onclick="confirmation(this)"></i>
+          <i id="icon" class="icon ion-ios-heart" onclick="confirmation('favorites-list-item10')"></i>
         <h3>From: Lisbon, Portugal</h3>
         <h3>To: Madrid, Spain</h3>
         <button id="buy-button" onclick="visitPage('Lisbon, Portugal', 'Madrid, Spain');">Buy</button>
       </ion-item>
-      <ion-item class="item-thumbnail-left" id="favorites-list-item11"">
+      <ion-item class="item-thumbnail-left" id="favorites-list-item11">
         <img id="thumbnail" src="img/HutWGo5IRCupJxmDu4dv_madeira.jpeg">
-        <i id="icon" class="ion-ios-heart" onclick="confirmation(this)"></i>
+        <i id="icon" class="ion-ios-heart" onclick="confirmation('favorites-list-item11')"></i>
         <h3>From: Lisbon, Portugal</h3>
         <h3>To: Lisse, Holland</h3>
         <button id="buy-button" onclick="visitPage('Lisbon, Portugal', 'Lisse, Holland');">Buy</button>
       </ion-item>
-      <ion-item class="item-thumbnail-left" id="favorites-list-item12"">
+      <ion-item class="item-thumbnail-left" id="favorites-list-item12">
         <img id="thumbnail" src="img/HutWGo5IRCupJxmDu4dv_madeira.jpeg">
-        <i id="icon" class="ion-ios-heart" onclick="confirmation(this)"></i>
+        <i id="icon" class="ion-ios-heart" onclick="confirmation('favorites-list-item12')"></i>
         <h3>From: Lisbon, Portugal</h3>
         <h3>To: Rome, Italy</h3>
         <button id="buy-button" onclick="visitPage('Lisbon, Portugal', 'Rome, Italy');">Buy</button>
@@ -75,10 +75,6 @@
   </ion-content>  
 </ion-view>
 <script>
-//function changeIcon(x) {
-  //x.classList.toggle("ion-ios-heart-outline");
-//}
-
 function confirmation(id){
     var result = confirm("Remove from favorites?");
     if(result){
