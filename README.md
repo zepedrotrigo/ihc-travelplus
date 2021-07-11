@@ -1,5 +1,4 @@
 # ihc-travelplus
-Functional prototype of a travelling agency engine
 ![Image](/screenshots/1.png)
 ![Image](/screenshots/2.png)
 ![Image](/screenshots/3.png)
